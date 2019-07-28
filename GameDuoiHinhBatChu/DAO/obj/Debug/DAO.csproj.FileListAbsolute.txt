@@ -1,0 +1,9 @@
+F:\Game\GameDuoiHinhBatChu\DAO\bin\Debug\DAO.dll
+F:\Game\GameDuoiHinhBatChu\DAO\bin\Debug\DAO.pdb
+F:\Game\GameDuoiHinhBatChu\DAO\bin\Debug\DTO.dll
+F:\Game\GameDuoiHinhBatChu\DAO\bin\Debug\DTO.pdb
+F:\Game\GameDuoiHinhBatChu\DAO\obj\Debug\DAO.csprojAssemblyReference.cache
+F:\Game\GameDuoiHinhBatChu\DAO\obj\Debug\DAO.csproj.CoreCompileInputs.cache
+F:\Game\GameDuoiHinhBatChu\DAO\obj\Debug\DAO.csproj.CopyComplete
+F:\Game\GameDuoiHinhBatChu\DAO\obj\Debug\DAO.dll
+F:\Game\GameDuoiHinhBatChu\DAO\obj\Debug\DAO.pdb

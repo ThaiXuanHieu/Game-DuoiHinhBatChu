@@ -1,0 +1,11 @@
+F:\Game\GameDuoiHinhBatChu\BUS\bin\Debug\BUS.dll
+F:\Game\GameDuoiHinhBatChu\BUS\bin\Debug\BUS.pdb
+F:\Game\GameDuoiHinhBatChu\BUS\bin\Debug\DAO.dll
+F:\Game\GameDuoiHinhBatChu\BUS\bin\Debug\DTO.dll
+F:\Game\GameDuoiHinhBatChu\BUS\bin\Debug\DAO.pdb
+F:\Game\GameDuoiHinhBatChu\BUS\bin\Debug\DTO.pdb
+F:\Game\GameDuoiHinhBatChu\BUS\obj\Debug\BUS.csprojAssemblyReference.cache
+F:\Game\GameDuoiHinhBatChu\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
+F:\Game\GameDuoiHinhBatChu\BUS\obj\Debug\BUS.csproj.CopyComplete
+F:\Game\GameDuoiHinhBatChu\BUS\obj\Debug\BUS.dll
+F:\Game\GameDuoiHinhBatChu\BUS\obj\Debug\BUS.pdb
