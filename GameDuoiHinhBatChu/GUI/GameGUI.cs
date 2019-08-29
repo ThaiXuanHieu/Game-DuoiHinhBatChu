@@ -69,24 +69,21 @@ namespace GUI
         {
             if (result.Equals(answers[index - 1]))
             {
-                MessageBox.Show("Chúc mừng. Cộng 100 Coin", "Thông báo");
+                MessageBox.Show("Chúc mừng. Thưởng 100 Coin", "Thông báo");
                 RemoveTextBox();
                 LoadNextQuestion();
-
             }
             else
             {
+                MessageBox.Show("NGUUUUUUUUUUUUUUUUUUUU", "Thông báo");
+
+                for(int i = 0; i < answers[index - 1].Length; i++)
+                {
+                    textBoxes[i].Text = string.Empty;
+                }
+
                 i = 0;
                 result = string.Empty;
-                
-            }
-        }
-        
-        public void txtChar_Click()
-        {
-            if(textBoxes[i].Text.CompareTo("A") == 1 && textBoxes[i].Text.CompareTo("Z") == 1)
-            {
-                textBoxes[i].Text = string.Empty;
             }
         }
 
@@ -97,9 +94,11 @@ namespace GUI
             lblCoin.Text = (int.Parse(lblCoin.Text) + 100).ToString(); // coin = 200
             bitmap = new Bitmap(Application.StartupPath + "\\Resources\\" + images[index - 1].ToString() + ".jpg"); 
             picQuestion.Image = bitmap;
-            
             GenTextBox();
-            
+
+            i = 0;
+            result = string.Empty;
+
         }
 
         public void RemoveTextBox()
@@ -123,18 +122,16 @@ namespace GUI
                 textBoxes[i] = new TextBox()
                 {
                     Size = new Size(40, 40),
-                    Location = new Point(ToaDoX, ToaDoY),
+                    Location = new Point(ToaDoX - 20, ToaDoY),
                     Font = new Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Bold),
                     TextAlign = HorizontalAlignment.Center,
                     Text = string.Empty
                 };
-                ToaDoX += 45;
-
-                this.Controls.Add(textBoxes[i]);
                 
+                this.Controls.Add(textBoxes[i]);
+
+                ToaDoX += 45;
             }
-            i = 0;
-            result = string.Empty;
         }
 
         private void btnChar_Click(object sender, EventArgs e)
@@ -148,7 +145,6 @@ namespace GUI
             {
                 CheckAnswer();
             }
-
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -156,7 +152,7 @@ namespace GUI
             PlayerBUS.Instance.UpdatePlayer(player.PlayerName, player.Password, int.Parse(lblCoin.Text));
             QuestionBUS.Instance.UpdateQuestion(lblOrdinal.Text, ConvertImageToByteArray(picQuestion.Image), answers[index - 1], question.PlayerName);
 
-            this.Close();
+            Application.Exit();
         }
     }
 }

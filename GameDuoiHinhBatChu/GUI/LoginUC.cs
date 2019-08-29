@@ -36,12 +36,11 @@ namespace GUI
         private void btnLoginUC_Click(object sender, EventArgs e)
         {
             GameGUI gameGUI = new GameGUI(txtPlayerNameLoginUC.Text);
-            LoginGUI loginGUI = new LoginGUI();
             PlayerDTO player = new PlayerDTO();
             player = PlayerBUS.Instance.GetPlayerByPlayerName(txtPlayerNameLoginUC.Text);
             if (player.PlayerName == txtPlayerNameLoginUC.Text && player.Password == txtPasswordLoginUC.Text)
             {
-                loginGUI.Hide();
+                
                 gameGUI.Show();
                 
             }
