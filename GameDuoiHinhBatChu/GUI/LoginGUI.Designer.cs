@@ -32,8 +32,8 @@
             this.btnSignupGUI = new System.Windows.Forms.Button();
             this.btnLoginGUI = new System.Windows.Forms.Button();
             this.pnlGUI = new System.Windows.Forms.Panel();
-            this.signupUC = new GUI.SignupUC();
             this.loginUC = new GUI.LoginUC();
+            this.signupUC = new GUI.SignupUC();
             this.pnlGUI.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -76,6 +76,15 @@
             this.pnlGUI.Size = new System.Drawing.Size(425, 384);
             this.pnlGUI.TabIndex = 2;
             // 
+            // loginUC
+            // 
+            this.loginUC.BackColor = System.Drawing.Color.White;
+            this.loginUC.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.loginUC.Location = new System.Drawing.Point(0, 0);
+            this.loginUC.Name = "loginUC";
+            this.loginUC.Size = new System.Drawing.Size(425, 384);
+            this.loginUC.TabIndex = 1;
+            // 
             // signupUC
             // 
             this.signupUC.BackColor = System.Drawing.Color.White;
@@ -85,15 +94,6 @@
             this.signupUC.Name = "signupUC";
             this.signupUC.Size = new System.Drawing.Size(425, 384);
             this.signupUC.TabIndex = 0;
-            // 
-            // loginUC
-            // 
-            this.loginUC.BackColor = System.Drawing.Color.White;
-            this.loginUC.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.loginUC.Location = new System.Drawing.Point(0, 0);
-            this.loginUC.Name = "loginUC";
-            this.loginUC.Size = new System.Drawing.Size(425, 384);
-            this.loginUC.TabIndex = 1;
             // 
             // LoginGUI
             // 
@@ -107,6 +107,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "LoginGUI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Load += new System.EventHandler(this.LoginGUI_Load);
             this.pnlGUI.ResumeLayout(false);
             this.ResumeLayout(false);
 

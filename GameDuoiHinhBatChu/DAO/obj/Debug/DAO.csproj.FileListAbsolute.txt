@@ -7,3 +7,12 @@ F:\Game\GameDuoiHinhBatChu\DAO\obj\Debug\DAO.csproj.CoreCompileInputs.cache
 F:\Game\GameDuoiHinhBatChu\DAO\obj\Debug\DAO.csproj.CopyComplete
 F:\Game\GameDuoiHinhBatChu\DAO\obj\Debug\DAO.dll
 F:\Game\GameDuoiHinhBatChu\DAO\obj\Debug\DAO.pdb
+F:\Game\Game-DuoiHinhBatChu\GameDuoiHinhBatChu\DAO\bin\Debug\DAO.dll
+F:\Game\Game-DuoiHinhBatChu\GameDuoiHinhBatChu\DAO\bin\Debug\DAO.pdb
+F:\Game\Game-DuoiHinhBatChu\GameDuoiHinhBatChu\DAO\bin\Debug\DTO.dll
+F:\Game\Game-DuoiHinhBatChu\GameDuoiHinhBatChu\DAO\bin\Debug\DTO.pdb
+F:\Game\Game-DuoiHinhBatChu\GameDuoiHinhBatChu\DAO\obj\Debug\DAO.csprojAssemblyReference.cache
+F:\Game\Game-DuoiHinhBatChu\GameDuoiHinhBatChu\DAO\obj\Debug\DAO.csproj.CoreCompileInputs.cache
+F:\Game\Game-DuoiHinhBatChu\GameDuoiHinhBatChu\DAO\obj\Debug\DAO.csproj.CopyComplete
+F:\Game\Game-DuoiHinhBatChu\GameDuoiHinhBatChu\DAO\obj\Debug\DAO.dll
+F:\Game\Game-DuoiHinhBatChu\GameDuoiHinhBatChu\DAO\obj\Debug\DAO.pdb

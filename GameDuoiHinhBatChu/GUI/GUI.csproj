@@ -158,6 +158,8 @@
     <Content Include="Resources\caokien.jpg" />
     <Content Include="Resources\cobap.jpg" />
     <Content Include="Resources\dauthu.jpg" />
+    <None Include="Resources\icons8_Audio_32px.png" />
+    <None Include="Resources\icons8_No_Audio_32px.png" />
     <Content Include="Resources\kinhdo.jpg" />
     <Content Include="Resources\nhaccu.jpg" />
     <Content Include="Resources\noigian.jpg" />

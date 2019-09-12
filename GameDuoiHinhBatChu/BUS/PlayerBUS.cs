@@ -30,7 +30,7 @@ namespace BUS
 
         public PlayerBUS()
         {
-            dbConnection = new DBConnection();
+            //dbConnection = new DBConnection();
         }
 
 

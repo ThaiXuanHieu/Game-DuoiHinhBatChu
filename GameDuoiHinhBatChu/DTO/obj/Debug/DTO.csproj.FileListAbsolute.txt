@@ -4,3 +4,9 @@ F:\Game\GameDuoiHinhBatChu\DTO\obj\Debug\DTO.csprojAssemblyReference.cache
 F:\Game\GameDuoiHinhBatChu\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
 F:\Game\GameDuoiHinhBatChu\DTO\obj\Debug\DTO.dll
 F:\Game\GameDuoiHinhBatChu\DTO\obj\Debug\DTO.pdb
+F:\Game\Game-DuoiHinhBatChu\GameDuoiHinhBatChu\DTO\bin\Debug\DTO.dll
+F:\Game\Game-DuoiHinhBatChu\GameDuoiHinhBatChu\DTO\bin\Debug\DTO.pdb
+F:\Game\Game-DuoiHinhBatChu\GameDuoiHinhBatChu\DTO\obj\Debug\DTO.csprojAssemblyReference.cache
+F:\Game\Game-DuoiHinhBatChu\GameDuoiHinhBatChu\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+F:\Game\Game-DuoiHinhBatChu\GameDuoiHinhBatChu\DTO\obj\Debug\DTO.dll
+F:\Game\Game-DuoiHinhBatChu\GameDuoiHinhBatChu\DTO\obj\Debug\DTO.pdb

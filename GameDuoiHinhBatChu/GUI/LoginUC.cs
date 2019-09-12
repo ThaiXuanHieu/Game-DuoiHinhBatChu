@@ -46,7 +46,7 @@ namespace GUI
             }
             else
             {
-                MessageBox.Show("Tài khoản hoặc Mật khẩu không đúng", "Thông báo");
+                MessageBox.Show("Tài khoản hoặc Mật khẩu không đúng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
     }

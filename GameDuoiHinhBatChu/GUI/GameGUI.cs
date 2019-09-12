@@ -19,6 +19,7 @@ namespace GUI
         QuestionDTO question;
         string[] images = new string[] { "kichdong", "taihoa", "thamhoa", "tichphan", "tungtang", "xalan", "xauho", "xuongrong", "yeuot", "baola", "nhaccu", "caokien", "baothuc", "kinhdo", "noigian", "bachimbaynoi", "bamoi", "cobap", "xichlo", "dauthu" };
         string[] answers = new string[] { "KICHDONG", "TAIHOA", "THAMHOA", "TICHPHAN", "TUNGTANG", "XALAN", "XAUHO", "XUONGRONG", "YEUOT", "BAOLA", "NHACCU", "CAOKIEN", "BAOTHUC", "KINHDO", "NOIGIAN", "BACHIMBAYNOI", "BAMOI", "COBAP", "XICHLO", "DAUTHU" };
+        string[] answersVie = new string[] { "KÍCH ĐỘNG", "TAI HỌA", "THẢM HỌA", "TÍCH PHÂN", "TUNG TĂNG", "XÀ LAN", "XẤU HỔ", "XƯƠNG RỒNG", "YẾU ỚT", "BAO LA", "NHẠC CỤ", "CAO KIẾN", "BÁO THỨC", "KINH ĐỘ", "NỘI GIÁN", "BA CHÌM BẢY NỔI", "BÀ MỐI", "CƠ BẮP", "XÍCH LÔ", "ĐẦU THÚ" };
         Bitmap bitmap;
 
         int i = 0;
@@ -69,13 +70,14 @@ namespace GUI
         {
             if (result.Equals(answers[index - 1]))
             {
-                MessageBox.Show("Chúc mừng. Thưởng 100 Coin", "Thông báo");
+                string text = "ĐÁP ÁN : " + answersVie[index - 1];
+                MessageBox.Show("CHÚC MỪNG! THƯỞNG 100 COIN\n\n" + text, "Thông báo");
                 RemoveTextBox();
                 LoadNextQuestion();
             }
             else
             {
-                MessageBox.Show("NGUUUUUUUUUUUUUUUUUUUU", "Thông báo");
+                MessageBox.Show("Sai rồi! Mời nhập lại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
                 for(int i = 0; i < answers[index - 1].Length; i++)
                 {
@@ -89,6 +91,7 @@ namespace GUI
 
         public void LoadNextQuestion()
         {
+            CheckWin(index);
             index++;
             lblOrdinal.Text = index.ToString(); // ordinal = 2
             lblCoin.Text = (int.Parse(lblCoin.Text) + 100).ToString(); // coin = 200
@@ -99,6 +102,15 @@ namespace GUI
             i = 0;
             result = string.Empty;
 
+        }
+
+        public void CheckWin(int index)
+        {
+            if(index > 20)
+            {
+                MessageBox.Show("Chúc mừng!\nBạn đã vượt qua hết các câu hỏi\nChơi lại từ đầu", "Thông báo", MessageBoxButtons.OK);
+                return;
+            }
         }
 
         public void RemoveTextBox()
@@ -149,10 +161,27 @@ namespace GUI
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            PlayerBUS.Instance.UpdatePlayer(player.PlayerName, player.Password, int.Parse(lblCoin.Text));
-            QuestionBUS.Instance.UpdateQuestion(lblOrdinal.Text, ConvertImageToByteArray(picQuestion.Image), answers[index - 1], question.PlayerName);
+            if(MessageBox.Show("Lưu và Thoát", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            {
+                PlayerBUS.Instance.UpdatePlayer(player.PlayerName, player.Password, int.Parse(lblCoin.Text));
+                QuestionBUS.Instance.UpdateQuestion(lblOrdinal.Text, ConvertImageToByteArray(picQuestion.Image), answers[index - 1], question.PlayerName);
 
-            Application.Exit();
+                Application.Exit();
+            }
+        }
+
+        private void btnOnOffSound_CheckedChanged(object sender, EventArgs e)
+        {
+            if(btnOnOffSound.Checked)
+            {
+                btnOnOffSound.BackgroundImage = global::GUI.Properties.Resources.icons8_No_Audio_32px;
+                LoginGUI.Instance.Stop();
+            }
+            else
+            {
+                btnOnOffSound.BackgroundImage = global::GUI.Properties.Resources.icons8_Audio_32px;
+                LoginGUI.Instance.Play();
+            }
         }
     }
 }

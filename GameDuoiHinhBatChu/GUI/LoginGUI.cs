@@ -13,15 +13,23 @@ namespace GUI
 {
     public partial class LoginGUI : Form
     {
-        private static SoundPlayer soundPlayer;
+        private static SoundPlayer instance;
+
+        public static SoundPlayer Instance
+        {
+            get
+            {
+                if (instance == null)
+                {
+                    instance = new SoundPlayer("Login.wav");
+                }
+                return instance;
+            }
+        }
 
         public LoginGUI()
         {
             InitializeComponent();
-            loginUC.Visible = true;
-            signupUC.Visible = false;
-            soundPlayer = new SoundPlayer("Login.wav");
-            soundPlayer.Play();
         }
 
         private void btnLoginGUI_Click(object sender, EventArgs e)
@@ -42,6 +50,14 @@ namespace GUI
             btnSignupGUI.ForeColor = Color.DodgerBlue;
             btnLoginGUI.BackColor = Color.DodgerBlue;
             btnLoginGUI.ForeColor = Color.White;
+        }
+
+        private void LoginGUI_Load(object sender, EventArgs e)
+        {
+            loginUC.Visible = true;
+            signupUC.Visible = false;
+            instance = new SoundPlayer("Login.wav");
+            instance.Play();
         }
     }
 }

@@ -31,8 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GameGUI));
             this.DragControl = new Bunifu.Framework.UI.BunifuDragControl(this.components);
-            this.picQuestion = new System.Windows.Forms.PictureBox();
-            this.picCoin = new System.Windows.Forms.PictureBox();
             this.lblCoin = new System.Windows.Forms.Label();
             this.btnClose = new System.Windows.Forms.Button();
             this.lblOrdinalOfQuestion = new System.Windows.Forms.Label();
@@ -61,8 +59,12 @@
             this.btnO = new System.Windows.Forms.Button();
             this.btnN = new System.Windows.Forms.Button();
             this.btnM = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.picQuestion)).BeginInit();
+            this.picCoin = new System.Windows.Forms.PictureBox();
+            this.picQuestion = new System.Windows.Forms.PictureBox();
+            this.btnOnOffSound = new System.Windows.Forms.CheckBox();
+            this.lblInfo = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picCoin)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picQuestion)).BeginInit();
             this.SuspendLayout();
             // 
             // DragControl
@@ -72,32 +74,12 @@
             this.DragControl.TargetControl = this;
             this.DragControl.Vertical = true;
             // 
-            // picQuestion
-            // 
-            this.picQuestion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.picQuestion.Location = new System.Drawing.Point(10, 136);
-            this.picQuestion.Name = "picQuestion";
-            this.picQuestion.Size = new System.Drawing.Size(578, 292);
-            this.picQuestion.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picQuestion.TabIndex = 0;
-            this.picQuestion.TabStop = false;
-            // 
-            // picCoin
-            // 
-            this.picCoin.Image = ((System.Drawing.Image)(resources.GetObject("picCoin.Image")));
-            this.picCoin.Location = new System.Drawing.Point(439, 42);
-            this.picCoin.Name = "picCoin";
-            this.picCoin.Size = new System.Drawing.Size(53, 40);
-            this.picCoin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picCoin.TabIndex = 1;
-            this.picCoin.TabStop = false;
-            // 
             // lblCoin
             // 
             this.lblCoin.AutoSize = true;
             this.lblCoin.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCoin.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.lblCoin.Location = new System.Drawing.Point(499, 43);
+            this.lblCoin.Location = new System.Drawing.Point(439, 43);
             this.lblCoin.Name = "lblCoin";
             this.lblCoin.Size = new System.Drawing.Size(0, 39);
             this.lblCoin.TabIndex = 2;
@@ -140,7 +122,7 @@
             this.btnA.BackColor = System.Drawing.Color.White;
             this.btnA.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnA.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnA.Location = new System.Drawing.Point(33, 565);
+            this.btnA.Location = new System.Drawing.Point(31, 536);
             this.btnA.Name = "btnA";
             this.btnA.Size = new System.Drawing.Size(39, 46);
             this.btnA.TabIndex = 6;
@@ -153,7 +135,7 @@
             this.btnB.BackColor = System.Drawing.Color.White;
             this.btnB.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnB.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnB.Location = new System.Drawing.Point(78, 565);
+            this.btnB.Location = new System.Drawing.Point(76, 536);
             this.btnB.Name = "btnB";
             this.btnB.Size = new System.Drawing.Size(39, 46);
             this.btnB.TabIndex = 7;
@@ -166,7 +148,7 @@
             this.btnC.BackColor = System.Drawing.Color.White;
             this.btnC.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnC.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnC.Location = new System.Drawing.Point(123, 565);
+            this.btnC.Location = new System.Drawing.Point(121, 536);
             this.btnC.Name = "btnC";
             this.btnC.Size = new System.Drawing.Size(39, 46);
             this.btnC.TabIndex = 8;
@@ -179,7 +161,7 @@
             this.btnD.BackColor = System.Drawing.Color.White;
             this.btnD.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnD.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnD.Location = new System.Drawing.Point(168, 565);
+            this.btnD.Location = new System.Drawing.Point(166, 536);
             this.btnD.Name = "btnD";
             this.btnD.Size = new System.Drawing.Size(39, 46);
             this.btnD.TabIndex = 9;
@@ -192,7 +174,7 @@
             this.btnE.BackColor = System.Drawing.Color.White;
             this.btnE.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnE.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnE.Location = new System.Drawing.Point(213, 565);
+            this.btnE.Location = new System.Drawing.Point(211, 536);
             this.btnE.Name = "btnE";
             this.btnE.Size = new System.Drawing.Size(39, 46);
             this.btnE.TabIndex = 10;
@@ -205,7 +187,7 @@
             this.btnF.BackColor = System.Drawing.Color.White;
             this.btnF.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnF.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnF.Location = new System.Drawing.Point(258, 565);
+            this.btnF.Location = new System.Drawing.Point(256, 536);
             this.btnF.Name = "btnF";
             this.btnF.Size = new System.Drawing.Size(39, 46);
             this.btnF.TabIndex = 11;
@@ -218,7 +200,7 @@
             this.btnG.BackColor = System.Drawing.Color.White;
             this.btnG.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnG.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnG.Location = new System.Drawing.Point(303, 565);
+            this.btnG.Location = new System.Drawing.Point(301, 536);
             this.btnG.Name = "btnG";
             this.btnG.Size = new System.Drawing.Size(39, 46);
             this.btnG.TabIndex = 12;
@@ -231,7 +213,7 @@
             this.btnH.BackColor = System.Drawing.Color.White;
             this.btnH.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnH.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnH.Location = new System.Drawing.Point(348, 565);
+            this.btnH.Location = new System.Drawing.Point(346, 536);
             this.btnH.Name = "btnH";
             this.btnH.Size = new System.Drawing.Size(39, 46);
             this.btnH.TabIndex = 13;
@@ -244,7 +226,7 @@
             this.btnI.BackColor = System.Drawing.Color.White;
             this.btnI.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnI.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnI.Location = new System.Drawing.Point(393, 565);
+            this.btnI.Location = new System.Drawing.Point(391, 536);
             this.btnI.Name = "btnI";
             this.btnI.Size = new System.Drawing.Size(39, 46);
             this.btnI.TabIndex = 14;
@@ -257,7 +239,7 @@
             this.btnJ.BackColor = System.Drawing.Color.White;
             this.btnJ.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnJ.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnJ.Location = new System.Drawing.Point(438, 565);
+            this.btnJ.Location = new System.Drawing.Point(436, 536);
             this.btnJ.Name = "btnJ";
             this.btnJ.Size = new System.Drawing.Size(39, 46);
             this.btnJ.TabIndex = 15;
@@ -270,7 +252,7 @@
             this.btnK.BackColor = System.Drawing.Color.White;
             this.btnK.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnK.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnK.Location = new System.Drawing.Point(483, 565);
+            this.btnK.Location = new System.Drawing.Point(481, 536);
             this.btnK.Name = "btnK";
             this.btnK.Size = new System.Drawing.Size(39, 46);
             this.btnK.TabIndex = 16;
@@ -283,7 +265,7 @@
             this.btnL.BackColor = System.Drawing.Color.White;
             this.btnL.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnL.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnL.Location = new System.Drawing.Point(528, 565);
+            this.btnL.Location = new System.Drawing.Point(526, 536);
             this.btnL.Name = "btnL";
             this.btnL.Size = new System.Drawing.Size(39, 46);
             this.btnL.TabIndex = 17;
@@ -296,7 +278,7 @@
             this.btnY.BackColor = System.Drawing.Color.White;
             this.btnY.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnY.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnY.Location = new System.Drawing.Point(528, 617);
+            this.btnY.Location = new System.Drawing.Point(526, 588);
             this.btnY.Name = "btnY";
             this.btnY.Size = new System.Drawing.Size(39, 46);
             this.btnY.TabIndex = 29;
@@ -309,7 +291,7 @@
             this.btnX.BackColor = System.Drawing.Color.White;
             this.btnX.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnX.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnX.Location = new System.Drawing.Point(483, 617);
+            this.btnX.Location = new System.Drawing.Point(481, 588);
             this.btnX.Name = "btnX";
             this.btnX.Size = new System.Drawing.Size(39, 46);
             this.btnX.TabIndex = 28;
@@ -322,7 +304,7 @@
             this.btnV.BackColor = System.Drawing.Color.White;
             this.btnV.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnV.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnV.Location = new System.Drawing.Point(438, 617);
+            this.btnV.Location = new System.Drawing.Point(436, 588);
             this.btnV.Name = "btnV";
             this.btnV.Size = new System.Drawing.Size(39, 46);
             this.btnV.TabIndex = 27;
@@ -335,7 +317,7 @@
             this.btnU.BackColor = System.Drawing.Color.White;
             this.btnU.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnU.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnU.Location = new System.Drawing.Point(393, 617);
+            this.btnU.Location = new System.Drawing.Point(391, 588);
             this.btnU.Name = "btnU";
             this.btnU.Size = new System.Drawing.Size(39, 46);
             this.btnU.TabIndex = 26;
@@ -348,7 +330,7 @@
             this.btnT.BackColor = System.Drawing.Color.White;
             this.btnT.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnT.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnT.Location = new System.Drawing.Point(348, 617);
+            this.btnT.Location = new System.Drawing.Point(346, 588);
             this.btnT.Name = "btnT";
             this.btnT.Size = new System.Drawing.Size(39, 46);
             this.btnT.TabIndex = 25;
@@ -361,7 +343,7 @@
             this.btnS.BackColor = System.Drawing.Color.White;
             this.btnS.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnS.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnS.Location = new System.Drawing.Point(303, 617);
+            this.btnS.Location = new System.Drawing.Point(301, 588);
             this.btnS.Name = "btnS";
             this.btnS.Size = new System.Drawing.Size(39, 46);
             this.btnS.TabIndex = 24;
@@ -374,7 +356,7 @@
             this.btnR.BackColor = System.Drawing.Color.White;
             this.btnR.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnR.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnR.Location = new System.Drawing.Point(258, 617);
+            this.btnR.Location = new System.Drawing.Point(256, 588);
             this.btnR.Name = "btnR";
             this.btnR.Size = new System.Drawing.Size(39, 46);
             this.btnR.TabIndex = 23;
@@ -387,7 +369,7 @@
             this.btnQ.BackColor = System.Drawing.Color.White;
             this.btnQ.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnQ.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnQ.Location = new System.Drawing.Point(213, 617);
+            this.btnQ.Location = new System.Drawing.Point(211, 588);
             this.btnQ.Name = "btnQ";
             this.btnQ.Size = new System.Drawing.Size(39, 46);
             this.btnQ.TabIndex = 22;
@@ -400,7 +382,7 @@
             this.btnP.BackColor = System.Drawing.Color.White;
             this.btnP.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnP.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnP.Location = new System.Drawing.Point(168, 617);
+            this.btnP.Location = new System.Drawing.Point(166, 588);
             this.btnP.Name = "btnP";
             this.btnP.Size = new System.Drawing.Size(39, 46);
             this.btnP.TabIndex = 21;
@@ -413,7 +395,7 @@
             this.btnO.BackColor = System.Drawing.Color.White;
             this.btnO.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnO.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnO.Location = new System.Drawing.Point(123, 617);
+            this.btnO.Location = new System.Drawing.Point(121, 588);
             this.btnO.Name = "btnO";
             this.btnO.Size = new System.Drawing.Size(39, 46);
             this.btnO.TabIndex = 20;
@@ -426,7 +408,7 @@
             this.btnN.BackColor = System.Drawing.Color.White;
             this.btnN.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnN.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnN.Location = new System.Drawing.Point(78, 617);
+            this.btnN.Location = new System.Drawing.Point(76, 588);
             this.btnN.Name = "btnN";
             this.btnN.Size = new System.Drawing.Size(39, 46);
             this.btnN.TabIndex = 19;
@@ -439,7 +421,7 @@
             this.btnM.BackColor = System.Drawing.Color.White;
             this.btnM.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnM.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnM.Location = new System.Drawing.Point(33, 617);
+            this.btnM.Location = new System.Drawing.Point(31, 588);
             this.btnM.Name = "btnM";
             this.btnM.Size = new System.Drawing.Size(39, 46);
             this.btnM.TabIndex = 18;
@@ -447,11 +429,58 @@
             this.btnM.UseVisualStyleBackColor = false;
             this.btnM.Click += new System.EventHandler(this.btnChar_Click);
             // 
+            // picCoin
+            // 
+            this.picCoin.Image = ((System.Drawing.Image)(resources.GetObject("picCoin.Image")));
+            this.picCoin.Location = new System.Drawing.Point(379, 42);
+            this.picCoin.Name = "picCoin";
+            this.picCoin.Size = new System.Drawing.Size(53, 40);
+            this.picCoin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picCoin.TabIndex = 1;
+            this.picCoin.TabStop = false;
+            // 
+            // picQuestion
+            // 
+            this.picQuestion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.picQuestion.Location = new System.Drawing.Point(10, 136);
+            this.picQuestion.Name = "picQuestion";
+            this.picQuestion.Size = new System.Drawing.Size(578, 292);
+            this.picQuestion.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picQuestion.TabIndex = 0;
+            this.picQuestion.TabStop = false;
+            // 
+            // btnOnOffSound
+            // 
+            this.btnOnOffSound.Appearance = System.Windows.Forms.Appearance.Button;
+            this.btnOnOffSound.BackgroundImage = global::GUI.Properties.Resources.icons8_Audio_32px;
+            this.btnOnOffSound.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnOnOffSound.FlatAppearance.BorderSize = 0;
+            this.btnOnOffSound.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOnOffSound.Location = new System.Drawing.Point(531, 43);
+            this.btnOnOffSound.Name = "btnOnOffSound";
+            this.btnOnOffSound.Size = new System.Drawing.Size(57, 39);
+            this.btnOnOffSound.TabIndex = 30;
+            this.btnOnOffSound.UseVisualStyleBackColor = true;
+            this.btnOnOffSound.CheckedChanged += new System.EventHandler(this.btnOnOffSound_CheckedChanged);
+            // 
+            // lblInfo
+            // 
+            this.lblInfo.AutoSize = true;
+            this.lblInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInfo.ForeColor = System.Drawing.Color.Navy;
+            this.lblInfo.Location = new System.Drawing.Point(180, 676);
+            this.lblInfo.Name = "lblInfo";
+            this.lblInfo.Size = new System.Drawing.Size(241, 25);
+            this.lblInfo.TabIndex = 31;
+            this.lblInfo.Text = "© - Thái Xuân Hiếu - 2019";
+            // 
             // GameGUI
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(600, 710);
+            this.Controls.Add(this.lblInfo);
+            this.Controls.Add(this.btnOnOffSound);
             this.Controls.Add(this.btnY);
             this.Controls.Add(this.btnX);
             this.Controls.Add(this.btnV);
@@ -488,8 +517,8 @@
             this.Name = "GameGUI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.GameGUI_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.picQuestion)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCoin)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picQuestion)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -528,5 +557,7 @@
         private System.Windows.Forms.Button btnC;
         private System.Windows.Forms.Button btnB;
         private System.Windows.Forms.Button btnA;
+        private System.Windows.Forms.CheckBox btnOnOffSound;
+        private System.Windows.Forms.Label lblInfo;
     }
 }
