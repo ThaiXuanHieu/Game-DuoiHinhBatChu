@@ -56,8 +56,8 @@ namespace DAO
                 command.Connection = openConnection();
                 command.CommandText = query;
                 command.Parameters.AddRange(sqlParameters);
-                adapter.InsertCommand = command;
                 command.ExecuteNonQuery();
+                adapter.InsertCommand = command;
             }
         }
 
@@ -68,8 +68,8 @@ namespace DAO
                 command.Connection = openConnection();
                 command.CommandText = query;
                 command.Parameters.AddRange(sqlParameters);
-                adapter.UpdateCommand = command;
                 command.ExecuteNonQuery();
+                adapter.UpdateCommand = command;
             }
         }
     }

@@ -91,8 +91,9 @@ namespace GUI
 
         public void LoadNextQuestion()
         {
-            CheckWin(index);
+            
             index++;
+            CheckWin();
             lblOrdinal.Text = index.ToString(); // ordinal = 2
             lblCoin.Text = (int.Parse(lblCoin.Text) + 100).ToString(); // coin = 200
             bitmap = new Bitmap(Application.StartupPath + "\\Resources\\" + images[index - 1].ToString() + ".jpg"); 
@@ -104,12 +105,12 @@ namespace GUI
 
         }
 
-        public void CheckWin(int index)
+        public void CheckWin()
         {
             if(index > 20)
             {
-                MessageBox.Show("Chúc mừng!\nBạn đã vượt qua hết các câu hỏi\nChơi lại từ đầu", "Thông báo", MessageBoxButtons.OK);
-                return;
+                MessageBox.Show("CHÚC MỪNG! BẠN ĐÃ VƯỢT QUA HẾT CÁC CÂU HỎI\nCHƠI LẠI TỪ ĐẦU", "Thông báo", MessageBoxButtons.OK);
+                index = 1;
             }
         }
 
