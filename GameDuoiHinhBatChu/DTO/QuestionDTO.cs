@@ -9,38 +9,38 @@ namespace DTO
 {
     public class QuestionDTO
     {
-        private int _ordinalOfQuestion;
-        private byte[] _imageOfQuestion;
-        private string _answerOfQuestion;
-        private string _playerName;
+        private int _idQuestion;
+        private byte[] _imageQuestion;
+        private string _answerQuestion;
+        private int _idPlayer;
 
         public QuestionDTO()
         {
 
         }
 
-        public int OrdinalOfQuestion
+        public int IDQuestion
         {
-            get { return _ordinalOfQuestion; }
-            set { _ordinalOfQuestion = value; }
+            get { return _idQuestion; }
+            set { _idQuestion = value; }
         }
 
-        public byte[] ImageOfQuestion
+        public byte[] ImageQuestion
         {
-            get { return _imageOfQuestion; }
-            set { _imageOfQuestion = value; }
+            get { return _imageQuestion; }
+            set { _imageQuestion = value; }
         }
 
-        public string AnswerOfQuestion
+        public string AnswerQuestion
         {
-            get { return _answerOfQuestion; }
-            set { _answerOfQuestion = value; }
+            get { return _answerQuestion; }
+            set { _answerQuestion = value; }
         }
 
-        public string PlayerName
+        public int IDPlayer
         {
-            get { return _playerName; }
-            set { _playerName = value; }
+            get { return _idPlayer; }
+            set { _idPlayer = value; }
         }
 
     }

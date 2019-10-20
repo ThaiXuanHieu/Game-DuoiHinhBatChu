@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using BUS;
 using System.IO;
+using DTO;
 
 namespace GUI
 {
@@ -39,9 +40,14 @@ namespace GUI
 
         private void btnSignupUC_Click(object sender, EventArgs e)
         {
-            PlayerBUS.Instance.SavePlayerToDB(txtPlayerNameSignupUC.Text, txtPasswordSignupUC.Text, 100);
+            //Insert Player
+            PlayerBUS.Instance.InsertPlayerToDB(txtPlayerNameSignupUC.Text, txtPasswordSignupUC.Text, 100);
             lblNotifySignupSuccess.Text = "Đăng ký thành công";
-            SaveQuestionToDB();
+            // Insert Question
+            
+            PlayerDTO player = PlayerBUS.Instance.GetPlayerByPlayerName(txtPlayerNameSignupUC.Text);
+            bitmap = new Bitmap(Application.StartupPath + "\\Resources\\" + images[0] + ".jpg");
+            QuestionBUS.Instance.InsertQuestionToDB(1, ConvertImageToByteArray(bitmap), answers[0], player.IDPlayer);
         }
 
         public byte[] ConvertImageToByteArray(Image imageIn)
@@ -51,11 +57,5 @@ namespace GUI
             return ms.ToArray();
         }
 
-        public void SaveQuestionToDB()
-        {
-            bitmap = new Bitmap(Application.StartupPath + "\\Resources\\" + images[0] + ".jpg");
-
-            QuestionBUS.Instance.SaveQuestionToDB("1", ConvertImageToByteArray(bitmap), answers[0], txtPlayerNameSignupUC.Text);
-        }
     }
 }

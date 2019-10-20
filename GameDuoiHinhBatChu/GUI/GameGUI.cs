@@ -27,22 +27,22 @@ namespace GUI
         string result = string.Empty;
         int index = 0;
 
-        public GameGUI(string _playerName)
+        public GameGUI(int _idPlayer)
         {
             InitializeComponent();
             
-            player = PlayerBUS.Instance.GetPlayerByPlayerName(_playerName);
+            player = PlayerBUS.Instance.GetPlayerByIDPlayer(_idPlayer);
             
         }
 
         private void GameGUI_Load(object sender, EventArgs e)
         {
             
-            question = QuestionBUS.Instance.GetQuestionByPlayerName(player.PlayerName);
-            index = question.OrdinalOfQuestion;// = 1
+            question = QuestionBUS.Instance.GetQuestionByIDPlayer(player.IDPlayer);
+            index = question.IDQuestion;// = 1
             lblCoin.Text = player.Coin.ToString();// = 100;
-            lblOrdinal.Text = question.OrdinalOfQuestion.ToString();// = 1;
-            picQuestion.Image = ConvertByteArrayToImage(question.ImageOfQuestion);
+            lblOrdinal.Text = question.IDQuestion.ToString();// = 1;
+            picQuestion.Image = ConvertByteArrayToImage(question.ImageQuestion);
             GenTextBox();
         }
 
@@ -164,8 +164,8 @@ namespace GUI
         {
             if(MessageBox.Show("Lưu và Thoát", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
-                PlayerBUS.Instance.UpdatePlayer(player.PlayerName, player.Password, int.Parse(lblCoin.Text));
-                QuestionBUS.Instance.UpdateQuestion(lblOrdinal.Text, ConvertImageToByteArray(picQuestion.Image), answers[index - 1], question.PlayerName);
+                PlayerBUS.Instance.UpdatePlayer(player.IDPlayer, player.PlayerName, player.Password, int.Parse(lblCoin.Text));
+                QuestionBUS.Instance.UpdateQuestion(Int32.Parse(lblOrdinal.Text), ConvertImageToByteArray(picQuestion.Image), answers[index - 1], question.IDPlayer);
 
                 Application.Exit();
             }

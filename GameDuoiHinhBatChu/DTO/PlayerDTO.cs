@@ -8,6 +8,7 @@ namespace DTO
 {
     public class PlayerDTO
     {
+        private int _idPlayer;
         private string _playerName;
         private string _password;
         private int _coin;
@@ -15,6 +16,12 @@ namespace DTO
         public PlayerDTO()
         {
 
+        }
+
+        public int IDPlayer
+        {
+            get { return _idPlayer; }
+            set { _idPlayer = value; }
         }
 
         public string PlayerName

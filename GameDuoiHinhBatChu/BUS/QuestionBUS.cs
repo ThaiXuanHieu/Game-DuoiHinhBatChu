@@ -16,7 +16,7 @@ namespace BUS
 {
     public class QuestionBUS
     {
-        private DBConnection dbConnection;
+        //private DBConnection dbConnection;
 
         private static QuestionBUS instance;
 
@@ -32,31 +32,31 @@ namespace BUS
 
         public QuestionBUS()
         {
-            dbConnection = new DBConnection();
+            //dbConnection = new DBConnection();
         }
 
-        public void SaveQuestionToDB(string _ordinalOfQuestion, byte[] _imageOfQuestion, string _answerOfQuestion, string _playerName)
+        public void InsertQuestionToDB(int _idQuestion, byte[] _imageQuestion, string _answerQuestion, int _idPlayer)
         {
-            QuestionDAO.Instance.Insert(_ordinalOfQuestion, _imageOfQuestion, _answerOfQuestion, _playerName);
+            QuestionDAO.Instance.Insert(_idQuestion, _imageQuestion, _answerQuestion, _idPlayer);
         }
 
-        public void UpdateQuestion(string _ordinalOfQuestion, byte[] _imageOfQuestion, string _answerOfQuestion, string _playerName)
+        public void UpdateQuestion(int _idQuestion, byte[] _imageQuestion, string _answerQuestion, int _idPlayer)
         {
-            QuestionDAO.Instance.Update(_ordinalOfQuestion, _imageOfQuestion, _answerOfQuestion, _playerName);
+            QuestionDAO.Instance.Update(_idQuestion, _imageQuestion, _answerQuestion, _idPlayer);
         }
 
-        public QuestionDTO GetQuestionByPlayerName(string _playerName)
+        public QuestionDTO GetQuestionByIDPlayer(int _idPlayer)
         {
             QuestionDTO question = new QuestionDTO();
             DataTable dataTable = new DataTable();
-            dataTable = QuestionDAO.Instance.Select(_playerName);
+            dataTable = QuestionDAO.Instance.Select(_idPlayer);
 
             foreach(DataRow dataRow in dataTable.Rows)
             {
-                question.OrdinalOfQuestion = Int32.Parse(dataRow["ordinalOfQuestion"].ToString().Trim());
-                question.ImageOfQuestion = (byte[])dataRow["imageOfQuestion"];
-                question.AnswerOfQuestion = dataRow["answerOfQuestion"].ToString().Trim();
-                question.PlayerName = dataRow["playerName"].ToString().Trim();
+                question.IDQuestion = Int32.Parse(dataRow["idQuestion"].ToString().Trim());
+                question.ImageQuestion = (byte[])dataRow["imageQuestion"];
+                question.AnswerQuestion = dataRow["answerQuestion"].ToString().Trim();
+                question.IDPlayer = Int32.Parse(dataRow["idPlayer"].ToString().Trim());
             }
             return question;
         }

@@ -14,7 +14,7 @@ namespace BUS
 {
     public class PlayerBUS
     {
-        private DBConnection dbConnection;
+        //private DBConnection dbConnection;
 
         private static PlayerBUS instance;
 
@@ -34,13 +34,14 @@ namespace BUS
         }
 
 
-        public PlayerDTO GetPlayerByPlayerName(string _playerName)
+        public PlayerDTO GetPlayerByIDPlayer(int _idPlayer)
         {
             PlayerDTO player = new PlayerDTO();
             DataTable dataTable = new DataTable();
-            dataTable = PlayerDAO.Instance.Select(_playerName);
+            dataTable = PlayerDAO.Instance.Select(_idPlayer);
             foreach (DataRow dataRow in dataTable.Rows)
             {
+                player.IDPlayer = Int32.Parse(dataRow["idPlayer"].ToString().Trim());
                 player.PlayerName = dataRow["playerName"].ToString().Trim();
                 player.Password = dataRow["password"].ToString().Trim();
                 player.Coin = Int32.Parse(dataRow["coin"].ToString());
@@ -48,14 +49,29 @@ namespace BUS
             return player;
         }
 
-        public void SavePlayerToDB(string _playerName, string _password, int _coin)
+        public PlayerDTO GetPlayerByPlayerName(string _playerName)
+        {
+            PlayerDTO player = new PlayerDTO();
+            DataTable dataTable = new DataTable();
+            dataTable = PlayerDAO.Instance.Select(_playerName);
+            foreach (DataRow dataRow in dataTable.Rows)
+            {
+                player.IDPlayer = Int32.Parse(dataRow["idPlayer"].ToString().Trim());
+                player.PlayerName = dataRow["playerName"].ToString().Trim();
+                player.Password = dataRow["password"].ToString().Trim();
+                player.Coin = Int32.Parse(dataRow["coin"].ToString());
+            }
+            return player;
+        }
+
+        public void InsertPlayerToDB(string _playerName, string _password, int _coin)
         {
             PlayerDAO.Instance.Insert(_playerName, _password, _coin);
         }
 
-        public void UpdatePlayer(string _playerName, string _password, int _coin)
+        public void UpdatePlayer(int _idPlayer, string _playerName, string _password, int _coin)
         {
-            PlayerDAO.Instance.Update(_playerName, _password, _coin);
+            PlayerDAO.Instance.Update(_idPlayer, _playerName, _password, _coin);
         }
 
         
