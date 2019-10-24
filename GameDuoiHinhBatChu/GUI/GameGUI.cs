@@ -44,6 +44,7 @@ namespace GUI
             lblOrdinal.Text = question.IDQuestion.ToString();// = 1;
             picQuestion.Image = ConvertByteArrayToImage(question.ImageQuestion);
             GenTextBox();
+            GenButtonChar(index);
         }
 
         public byte[] ConvertImageToByteArray(Image imageIn)
@@ -99,7 +100,7 @@ namespace GUI
             bitmap = new Bitmap(Application.StartupPath + "\\Resources\\" + images[index - 1].ToString() + ".jpg"); 
             picQuestion.Image = bitmap;
             GenTextBox();
-
+            GenButtonChar(index);
             i = 0;
             result = string.Empty;
 
@@ -146,6 +147,38 @@ namespace GUI
                 ToaDoX += 45;
             }
         }
+
+        // Tạo các Button với các ký tự được phát sinh ngẫu nhiên từ Đáp án và Bảng chữ cái
+        private void GenButtonChar(int index)
+        {
+            List<string> chars = new List<string>(14);
+            foreach(var ch in answers[index - 1])
+            {
+                chars.Add(ch.ToString());
+            }
+
+            Random rd = new Random();
+            int indexRandom;
+            char[] alphabet = "ABCDEFGHIJKLMNOPQRSTUVXY".ToCharArray();
+
+            for (int i = chars.Count; i < chars.Capacity; i++)
+            {
+                indexRandom = rd.Next(alphabet.Length);
+                chars.Add(alphabet[i].ToString());
+            }
+
+            List<Button> buttons = new List<Button>() { btnChar1, btnChar2, btnChar3, btnChar4, btnChar5, btnChar6, 
+            btnChar7, btnChar8, btnChar9, btnChar10, btnChar11, btnChar12, btnChar13, btnChar14};
+
+            foreach(var button in buttons)
+            {
+                indexRandom = rd.Next(chars.Count);
+                button.Text = chars[indexRandom];
+                chars.Remove(chars[indexRandom]);
+            }
+
+        }
+
 
         private void btnChar_Click(object sender, EventArgs e)
         {
