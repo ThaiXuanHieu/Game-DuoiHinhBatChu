@@ -35,12 +35,12 @@ namespace BUS
             //dbConnection = new DBConnection();
         }
 
-        public void InsertQuestionToDB(int _idQuestion, byte[] _imageQuestion, string _answerQuestion, int _idPlayer)
+        public void InsertQuestionToDB(int _idQuestion, string _imageQuestion, string _answerQuestion, int _idPlayer)
         {
             QuestionDAO.Instance.Insert(_idQuestion, _imageQuestion, _answerQuestion, _idPlayer);
         }
 
-        public void UpdateQuestion(int _idQuestion, byte[] _imageQuestion, string _answerQuestion, int _idPlayer)
+        public void UpdateQuestion(int _idQuestion, string _imageQuestion, string _answerQuestion, int _idPlayer)
         {
             QuestionDAO.Instance.Update(_idQuestion, _imageQuestion, _answerQuestion, _idPlayer);
         }
@@ -54,7 +54,7 @@ namespace BUS
             foreach(DataRow dataRow in dataTable.Rows)
             {
                 question.IDQuestion = Int32.Parse(dataRow["idQuestion"].ToString().Trim());
-                question.ImageQuestion = (byte[])dataRow["imageQuestion"];
+                question.ImageQuestion = dataRow["imageQuestion"].ToString();
                 question.AnswerQuestion = dataRow["answerQuestion"].ToString().Trim();
                 question.IDPlayer = Int32.Parse(dataRow["idPlayer"].ToString().Trim());
             }

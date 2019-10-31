@@ -26,6 +26,7 @@ namespace GUI
         TextBox[] textBoxes;
         string result = string.Empty;
         int index = 0;
+        string imageLocation = Application.StartupPath + "\\Resources\\";
 
         public GameGUI(int _idPlayer)
         {
@@ -42,30 +43,12 @@ namespace GUI
             index = question.IDQuestion;// = 1
             lblCoin.Text = player.Coin.ToString();// = 100;
             lblOrdinal.Text = question.IDQuestion.ToString();// = 1;
-            picQuestion.Image = ConvertByteArrayToImage(question.ImageQuestion);
+            picQuestion.Image = new Bitmap(question.ImageQuestion + ".jpg");
             GenTextBox();
             GenButtonChar(index);
         }
 
-        public byte[] ConvertImageToByteArray(Image imageIn)
-        {
-            MemoryStream ms = new MemoryStream();
-            imageIn.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
-            return ms.ToArray();
-        }
-
-        public Image ConvertByteArrayToImage(byte[] byteArrayIn)
-        {
-            if (byteArrayIn != null && byteArrayIn.Length > 0)
-            {
-                using (MemoryStream ms = new MemoryStream(byteArrayIn))
-                {
-                    
-                    return Image.FromStream(ms);
-                }
-            }
-            return null;
-        }
+        
         
         public void CheckAnswer()
         {
@@ -87,6 +70,8 @@ namespace GUI
 
                 i = 0;
                 result = string.Empty;
+
+                GenButtonChar(index);
             }
         }
 
@@ -186,7 +171,8 @@ namespace GUI
             textBoxes[i].Text = btn.Text;
             result += btn.Text;
             i++;
-
+            btn.Text = "";
+            //btn.Enabled = false;
             if (i == answers[index - 1].Length)
             {
                 CheckAnswer();
@@ -198,7 +184,7 @@ namespace GUI
             if(MessageBox.Show("Lưu và Thoát", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
                 PlayerBUS.Instance.UpdatePlayer(player.IDPlayer, player.PlayerName, player.Password, int.Parse(lblCoin.Text));
-                QuestionBUS.Instance.UpdateQuestion(Int32.Parse(lblOrdinal.Text), ConvertImageToByteArray(picQuestion.Image), answers[index - 1], question.IDPlayer);
+                QuestionBUS.Instance.UpdateQuestion(Int32.Parse(lblOrdinal.Text), imageLocation + images[index - 1], answers[index - 1], question.IDPlayer);
 
                 Application.Exit();
             }

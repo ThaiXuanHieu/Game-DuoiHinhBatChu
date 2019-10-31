@@ -38,14 +38,14 @@ namespace DAO
             return dbConnection.ExecuteSelectQuery(query, sqlParameters);
         }
 
-        public void Insert(int _idQuestion, byte[] _imageQuestion, string _answerQuestion, int _idPlayer)
+        public void Insert(int _idQuestion, string _imageQuestion, string _answerQuestion, int _idPlayer)
         {
             string query = "INSERT INTO Question(idQuestion, imageQuestion, answerQuestion, idPlayer) " +
                 "VALUES(@idQuestion, @imageQuestion, @answerQuestion, @idPlayer)";
             SqlParameter[] sqlParameters = new SqlParameter[4];
             sqlParameters[0] = new SqlParameter("@idQuestion", SqlDbType.VarChar);
             sqlParameters[0].Value = _idQuestion;
-            sqlParameters[1] = new SqlParameter("@imageQuestion", SqlDbType.Image);
+            sqlParameters[1] = new SqlParameter("@imageQuestion", SqlDbType.NVarChar);
             sqlParameters[1].Value = _imageQuestion;
             sqlParameters[2] = new SqlParameter("@answerQuestion", SqlDbType.VarChar);
             sqlParameters[2].Value = _answerQuestion;
@@ -54,14 +54,14 @@ namespace DAO
             dbConnection.ExecuteInsertQuery(query, sqlParameters);
         }
 
-        public void Update(int _idQuestion, byte[] _imageQuestion, string _answerQuestion, int _idPlayer)
+        public void Update(int _idQuestion, string _imageQuestion, string _answerQuestion, int _idPlayer)
         {
             string query = "UPDATE Question SET idQuestion = @idQuestion, imageQuestion = @imageQuestion, answerQuestion = @answerQuestion " +
                 "WHERE idPlayer = @idPlayer";
             SqlParameter[] sqlParameters = new SqlParameter[4];
             sqlParameters[0] = new SqlParameter("@idQuestion", SqlDbType.VarChar);
             sqlParameters[0].Value = _idQuestion;
-            sqlParameters[1] = new SqlParameter("@imageQuestion", SqlDbType.Image);
+            sqlParameters[1] = new SqlParameter("@imageQuestion", SqlDbType.NVarChar);
             sqlParameters[1].Value = _imageQuestion;
             sqlParameters[2] = new SqlParameter("@answerQuestion", SqlDbType.VarChar);
             sqlParameters[2].Value = _answerQuestion;

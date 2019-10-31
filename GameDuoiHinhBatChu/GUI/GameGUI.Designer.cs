@@ -93,7 +93,7 @@
             this.lblOrdinalOfQuestion.AutoSize = true;
             this.lblOrdinalOfQuestion.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblOrdinalOfQuestion.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.lblOrdinalOfQuestion.Location = new System.Drawing.Point(26, 43);
+            this.lblOrdinalOfQuestion.Location = new System.Drawing.Point(12, 77);
             this.lblOrdinalOfQuestion.Name = "lblOrdinalOfQuestion";
             this.lblOrdinalOfQuestion.Size = new System.Drawing.Size(89, 39);
             this.lblOrdinalOfQuestion.TabIndex = 4;
@@ -104,7 +104,7 @@
             this.lblOrdinal.AutoSize = true;
             this.lblOrdinal.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblOrdinal.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.lblOrdinal.Location = new System.Drawing.Point(121, 43);
+            this.lblOrdinal.Location = new System.Drawing.Point(118, 77);
             this.lblOrdinal.Name = "lblOrdinal";
             this.lblOrdinal.Size = new System.Drawing.Size(0, 39);
             this.lblOrdinal.TabIndex = 5;
@@ -112,7 +112,7 @@
             // picCoin
             // 
             this.picCoin.Image = ((System.Drawing.Image)(resources.GetObject("picCoin.Image")));
-            this.picCoin.Location = new System.Drawing.Point(379, 42);
+            this.picCoin.Location = new System.Drawing.Point(368, 76);
             this.picCoin.Name = "picCoin";
             this.picCoin.Size = new System.Drawing.Size(53, 40);
             this.picCoin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -136,7 +136,7 @@
             this.btnOnOffSound.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnOnOffSound.FlatAppearance.BorderSize = 0;
             this.btnOnOffSound.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOnOffSound.Location = new System.Drawing.Point(531, 43);
+            this.btnOnOffSound.Location = new System.Drawing.Point(531, 76);
             this.btnOnOffSound.Name = "btnOnOffSound";
             this.btnOnOffSound.Size = new System.Drawing.Size(57, 39);
             this.btnOnOffSound.TabIndex = 30;

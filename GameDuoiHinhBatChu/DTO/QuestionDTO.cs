@@ -10,7 +10,7 @@ namespace DTO
     public class QuestionDTO
     {
         private int _idQuestion;
-        private byte[] _imageQuestion;
+        private string _imageQuestion;
         private string _answerQuestion;
         private int _idPlayer;
 
@@ -25,7 +25,7 @@ namespace DTO
             set { _idQuestion = value; }
         }
 
-        public byte[] ImageQuestion
+        public string ImageQuestion
         {
             get { return _imageQuestion; }
             set { _imageQuestion = value; }

@@ -62,28 +62,13 @@
     <Compile Include="LoginGUI.Designer.cs">
       <DependentUpon>LoginGUI.cs</DependentUpon>
     </Compile>
-    <Compile Include="LoginUC.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="LoginUC.Designer.cs">
-      <DependentUpon>LoginUC.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SignupUC.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="SignupUC.Designer.cs">
-      <DependentUpon>SignupUC.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="GameGUI.resx">
       <DependentUpon>GameGUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginGUI.resx">
       <DependentUpon>LoginGUI.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="LoginUC.resx">
-      <DependentUpon>LoginUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -95,9 +80,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="SignupUC.resx">
-      <DependentUpon>SignupUC.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
