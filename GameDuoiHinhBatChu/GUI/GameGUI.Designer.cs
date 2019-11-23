@@ -39,7 +39,6 @@
             this.picQuestion = new System.Windows.Forms.PictureBox();
             this.btnOnOffSound = new System.Windows.Forms.CheckBox();
             this.lblInfo = new System.Windows.Forms.Label();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.btnChar1 = new System.Windows.Forms.Button();
             this.btnChar2 = new System.Windows.Forms.Button();
             this.btnChar3 = new System.Windows.Forms.Button();
@@ -54,9 +53,12 @@
             this.btnChar12 = new System.Windows.Forms.Button();
             this.btnChar13 = new System.Windows.Forms.Button();
             this.btnChar14 = new System.Windows.Forms.Button();
+            this.pnlButton = new System.Windows.Forms.Panel();
+            this.lblLevel = new System.Windows.Forms.Label();
+            this.lblLevelDetail = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picCoin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picQuestion)).BeginInit();
-            this.flowLayoutPanel1.SuspendLayout();
+            this.pnlButton.SuspendLayout();
             this.SuspendLayout();
             // 
             // DragControl
@@ -71,7 +73,7 @@
             this.lblCoin.AutoSize = true;
             this.lblCoin.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCoin.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.lblCoin.Location = new System.Drawing.Point(439, 43);
+            this.lblCoin.Location = new System.Drawing.Point(437, 77);
             this.lblCoin.Name = "lblCoin";
             this.lblCoin.Size = new System.Drawing.Size(0, 39);
             this.lblCoin.TabIndex = 2;
@@ -154,33 +156,12 @@
             this.lblInfo.TabIndex = 31;
             this.lblInfo.Text = "© - Thái Xuân Hiếu - 2019";
             // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.Controls.Add(this.btnChar1);
-            this.flowLayoutPanel1.Controls.Add(this.btnChar2);
-            this.flowLayoutPanel1.Controls.Add(this.btnChar3);
-            this.flowLayoutPanel1.Controls.Add(this.btnChar4);
-            this.flowLayoutPanel1.Controls.Add(this.btnChar5);
-            this.flowLayoutPanel1.Controls.Add(this.btnChar6);
-            this.flowLayoutPanel1.Controls.Add(this.btnChar7);
-            this.flowLayoutPanel1.Controls.Add(this.btnChar8);
-            this.flowLayoutPanel1.Controls.Add(this.btnChar9);
-            this.flowLayoutPanel1.Controls.Add(this.btnChar10);
-            this.flowLayoutPanel1.Controls.Add(this.btnChar11);
-            this.flowLayoutPanel1.Controls.Add(this.btnChar12);
-            this.flowLayoutPanel1.Controls.Add(this.btnChar13);
-            this.flowLayoutPanel1.Controls.Add(this.btnChar14);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(137, 535);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(315, 105);
-            this.flowLayoutPanel1.TabIndex = 32;
-            // 
             // btnChar1
             // 
             this.btnChar1.BackColor = System.Drawing.Color.White;
             this.btnChar1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnChar1.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnChar1.Location = new System.Drawing.Point(3, 3);
+            this.btnChar1.Location = new System.Drawing.Point(32, 14);
             this.btnChar1.Name = "btnChar1";
             this.btnChar1.Size = new System.Drawing.Size(39, 46);
             this.btnChar1.TabIndex = 38;
@@ -192,7 +173,7 @@
             this.btnChar2.BackColor = System.Drawing.Color.White;
             this.btnChar2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnChar2.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnChar2.Location = new System.Drawing.Point(48, 3);
+            this.btnChar2.Location = new System.Drawing.Point(77, 14);
             this.btnChar2.Name = "btnChar2";
             this.btnChar2.Size = new System.Drawing.Size(39, 46);
             this.btnChar2.TabIndex = 37;
@@ -204,7 +185,7 @@
             this.btnChar3.BackColor = System.Drawing.Color.White;
             this.btnChar3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnChar3.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnChar3.Location = new System.Drawing.Point(93, 3);
+            this.btnChar3.Location = new System.Drawing.Point(122, 14);
             this.btnChar3.Name = "btnChar3";
             this.btnChar3.Size = new System.Drawing.Size(39, 46);
             this.btnChar3.TabIndex = 36;
@@ -216,7 +197,7 @@
             this.btnChar4.BackColor = System.Drawing.Color.White;
             this.btnChar4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnChar4.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnChar4.Location = new System.Drawing.Point(138, 3);
+            this.btnChar4.Location = new System.Drawing.Point(167, 14);
             this.btnChar4.Name = "btnChar4";
             this.btnChar4.Size = new System.Drawing.Size(39, 46);
             this.btnChar4.TabIndex = 35;
@@ -228,7 +209,7 @@
             this.btnChar5.BackColor = System.Drawing.Color.White;
             this.btnChar5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnChar5.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnChar5.Location = new System.Drawing.Point(183, 3);
+            this.btnChar5.Location = new System.Drawing.Point(212, 14);
             this.btnChar5.Name = "btnChar5";
             this.btnChar5.Size = new System.Drawing.Size(39, 46);
             this.btnChar5.TabIndex = 34;
@@ -240,7 +221,7 @@
             this.btnChar6.BackColor = System.Drawing.Color.White;
             this.btnChar6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnChar6.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnChar6.Location = new System.Drawing.Point(228, 3);
+            this.btnChar6.Location = new System.Drawing.Point(257, 14);
             this.btnChar6.Name = "btnChar6";
             this.btnChar6.Size = new System.Drawing.Size(39, 46);
             this.btnChar6.TabIndex = 33;
@@ -252,7 +233,7 @@
             this.btnChar7.BackColor = System.Drawing.Color.White;
             this.btnChar7.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnChar7.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnChar7.Location = new System.Drawing.Point(273, 3);
+            this.btnChar7.Location = new System.Drawing.Point(302, 14);
             this.btnChar7.Name = "btnChar7";
             this.btnChar7.Size = new System.Drawing.Size(39, 46);
             this.btnChar7.TabIndex = 32;
@@ -264,7 +245,7 @@
             this.btnChar8.BackColor = System.Drawing.Color.White;
             this.btnChar8.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnChar8.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnChar8.Location = new System.Drawing.Point(3, 55);
+            this.btnChar8.Location = new System.Drawing.Point(32, 66);
             this.btnChar8.Name = "btnChar8";
             this.btnChar8.Size = new System.Drawing.Size(39, 46);
             this.btnChar8.TabIndex = 31;
@@ -276,7 +257,7 @@
             this.btnChar9.BackColor = System.Drawing.Color.White;
             this.btnChar9.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnChar9.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnChar9.Location = new System.Drawing.Point(48, 55);
+            this.btnChar9.Location = new System.Drawing.Point(77, 66);
             this.btnChar9.Name = "btnChar9";
             this.btnChar9.Size = new System.Drawing.Size(39, 46);
             this.btnChar9.TabIndex = 30;
@@ -288,7 +269,7 @@
             this.btnChar10.BackColor = System.Drawing.Color.White;
             this.btnChar10.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnChar10.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnChar10.Location = new System.Drawing.Point(93, 55);
+            this.btnChar10.Location = new System.Drawing.Point(122, 66);
             this.btnChar10.Name = "btnChar10";
             this.btnChar10.Size = new System.Drawing.Size(39, 46);
             this.btnChar10.TabIndex = 29;
@@ -300,7 +281,7 @@
             this.btnChar11.BackColor = System.Drawing.Color.White;
             this.btnChar11.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnChar11.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnChar11.Location = new System.Drawing.Point(138, 55);
+            this.btnChar11.Location = new System.Drawing.Point(167, 66);
             this.btnChar11.Name = "btnChar11";
             this.btnChar11.Size = new System.Drawing.Size(39, 46);
             this.btnChar11.TabIndex = 28;
@@ -312,7 +293,7 @@
             this.btnChar12.BackColor = System.Drawing.Color.White;
             this.btnChar12.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnChar12.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnChar12.Location = new System.Drawing.Point(183, 55);
+            this.btnChar12.Location = new System.Drawing.Point(212, 66);
             this.btnChar12.Name = "btnChar12";
             this.btnChar12.Size = new System.Drawing.Size(39, 46);
             this.btnChar12.TabIndex = 27;
@@ -324,7 +305,7 @@
             this.btnChar13.BackColor = System.Drawing.Color.White;
             this.btnChar13.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnChar13.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnChar13.Location = new System.Drawing.Point(228, 55);
+            this.btnChar13.Location = new System.Drawing.Point(257, 66);
             this.btnChar13.Name = "btnChar13";
             this.btnChar13.Size = new System.Drawing.Size(39, 46);
             this.btnChar13.TabIndex = 26;
@@ -336,22 +317,67 @@
             this.btnChar14.BackColor = System.Drawing.Color.White;
             this.btnChar14.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnChar14.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnChar14.Location = new System.Drawing.Point(273, 55);
+            this.btnChar14.Location = new System.Drawing.Point(302, 66);
             this.btnChar14.Name = "btnChar14";
             this.btnChar14.Size = new System.Drawing.Size(39, 46);
             this.btnChar14.TabIndex = 25;
             this.btnChar14.UseVisualStyleBackColor = false;
             this.btnChar14.Click += new System.EventHandler(this.btnChar_Click);
             // 
+            // pnlButton
+            // 
+            this.pnlButton.Controls.Add(this.btnChar12);
+            this.pnlButton.Controls.Add(this.btnChar1);
+            this.pnlButton.Controls.Add(this.btnChar13);
+            this.pnlButton.Controls.Add(this.btnChar2);
+            this.pnlButton.Controls.Add(this.btnChar14);
+            this.pnlButton.Controls.Add(this.btnChar11);
+            this.pnlButton.Controls.Add(this.btnChar3);
+            this.pnlButton.Controls.Add(this.btnChar10);
+            this.pnlButton.Controls.Add(this.btnChar9);
+            this.pnlButton.Controls.Add(this.btnChar4);
+            this.pnlButton.Controls.Add(this.btnChar8);
+            this.pnlButton.Controls.Add(this.btnChar7);
+            this.pnlButton.Controls.Add(this.btnChar5);
+            this.pnlButton.Controls.Add(this.btnChar6);
+            this.pnlButton.Location = new System.Drawing.Point(125, 538);
+            this.pnlButton.Name = "pnlButton";
+            this.pnlButton.Size = new System.Drawing.Size(361, 123);
+            this.pnlButton.TabIndex = 39;
+            // 
+            // lblLevel
+            // 
+            this.lblLevel.AutoSize = true;
+            this.lblLevel.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLevel.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.lblLevel.Location = new System.Drawing.Point(12, 20);
+            this.lblLevel.Name = "lblLevel";
+            this.lblLevel.Size = new System.Drawing.Size(146, 39);
+            this.lblLevel.TabIndex = 4;
+            this.lblLevel.Text = "Mức độ :";
+            // 
+            // lblLevelDetail
+            // 
+            this.lblLevelDetail.AutoSize = true;
+            this.lblLevelDetail.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLevelDetail.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.lblLevelDetail.Location = new System.Drawing.Point(164, 20);
+            this.lblLevelDetail.Name = "lblLevelDetail";
+            this.lblLevelDetail.Size = new System.Drawing.Size(55, 39);
+            this.lblLevelDetail.TabIndex = 4;
+            this.lblLevelDetail.Text = "Dễ";
+            // 
             // GameGUI
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(600, 710);
-            this.Controls.Add(this.flowLayoutPanel1);
+            this.Controls.Add(this.pnlButton);
             this.Controls.Add(this.lblInfo);
             this.Controls.Add(this.btnOnOffSound);
             this.Controls.Add(this.lblOrdinal);
+            this.Controls.Add(this.lblLevelDetail);
+            this.Controls.Add(this.lblLevel);
             this.Controls.Add(this.lblOrdinalOfQuestion);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.lblCoin);
@@ -365,7 +391,7 @@
             this.Load += new System.EventHandler(this.GameGUI_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picCoin)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picQuestion)).EndInit();
-            this.flowLayoutPanel1.ResumeLayout(false);
+            this.pnlButton.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -382,7 +408,6 @@
         private System.Windows.Forms.Label lblOrdinalOfQuestion;
         private System.Windows.Forms.CheckBox btnOnOffSound;
         private System.Windows.Forms.Label lblInfo;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Button btnChar1;
         private System.Windows.Forms.Button btnChar2;
         private System.Windows.Forms.Button btnChar3;
@@ -397,5 +422,8 @@
         private System.Windows.Forms.Button btnChar12;
         private System.Windows.Forms.Button btnChar13;
         private System.Windows.Forms.Button btnChar14;
+        private System.Windows.Forms.Panel pnlButton;
+        private System.Windows.Forms.Label lblLevelDetail;
+        private System.Windows.Forms.Label lblLevel;
     }
 }

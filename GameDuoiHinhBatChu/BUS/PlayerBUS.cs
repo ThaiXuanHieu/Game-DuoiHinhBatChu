@@ -42,38 +42,38 @@ namespace BUS
             foreach (DataRow dataRow in dataTable.Rows)
             {
                 player.IDPlayer = Int32.Parse(dataRow["idPlayer"].ToString().Trim());
-                player.PlayerName = dataRow["playerName"].ToString().Trim();
+                player.PlayerName = dataRow["email"].ToString().Trim();
                 player.Password = dataRow["password"].ToString().Trim();
                 player.Coin = Int32.Parse(dataRow["coin"].ToString());
             }
             return player;
         }
 
-        public PlayerDTO GetPlayerByPlayerName(string _playerName)
+        public DataTable GetPlayer(string _email, string _password)
         {
-            PlayerDTO player = new PlayerDTO();
-            DataTable dataTable = new DataTable();
-            dataTable = PlayerDAO.Instance.Select(_playerName);
-            foreach (DataRow dataRow in dataTable.Rows)
-            {
-                player.IDPlayer = Int32.Parse(dataRow["idPlayer"].ToString().Trim());
-                player.PlayerName = dataRow["playerName"].ToString().Trim();
-                player.Password = dataRow["password"].ToString().Trim();
-                player.Coin = Int32.Parse(dataRow["coin"].ToString());
-            }
-            return player;
+            return PlayerDAO.Instance.Select(_email, _password);
         }
 
-        public void InsertPlayerToDB(string _playerName, string _password, int _coin)
+        public DataTable GetPlayerByEmail(string _email)
         {
-            PlayerDAO.Instance.Insert(_playerName, _password, _coin);
+            return PlayerDAO.Instance.Select(_email);
         }
 
-        public void UpdatePlayer(int _idPlayer, string _playerName, string _password, int _coin)
+        public void InsertPlayerToDB(string _email, string _password, int _coin)
         {
-            PlayerDAO.Instance.Update(_idPlayer, _playerName, _password, _coin);
+            PlayerDAO.Instance.Insert(_email, _password, _coin);
         }
 
-        
+        public void UpdatePlayer(int _idPlayer, int _coin)
+        {
+            PlayerDAO.Instance.Update(_idPlayer, _coin);
+        }
+
+        public void UpdatePassword(string _email, string _password)
+        {
+            PlayerDAO.Instance.Update(_email, _password);
+        }
+
+
     }
 }

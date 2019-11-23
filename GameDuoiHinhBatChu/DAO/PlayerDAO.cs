@@ -37,21 +37,32 @@ namespace DAO
             return dbConnection.ExecuteSelectQuery(query, sqlParameters);
         }
 
-        public DataTable Select(string _playerName)
+        public DataTable Select(string _email, string _password)
         {
-            string query = "SELECT * FROM Player WHERE playerName = @playerName ";
-            SqlParameter[] sqlParameters = new SqlParameter[1];
-            sqlParameters[0] = new SqlParameter("@playerName", SqlDbType.VarChar);
-            sqlParameters[0].Value = _playerName;
+            string query = "SELECT * FROM Player WHERE email = @email AND password = @password";
+            SqlParameter[] sqlParameters = new SqlParameter[2];
+            sqlParameters[0] = new SqlParameter("@email", SqlDbType.VarChar);
+            sqlParameters[0].Value = _email;
+            sqlParameters[1] = new SqlParameter("@password", SqlDbType.VarChar);
+            sqlParameters[1].Value = _password;
             return dbConnection.ExecuteSelectQuery(query, sqlParameters);
         }
 
-        public void Insert(string _playerName, string _password, int _coin)
+        public DataTable Select(string _email)
         {
-            string query = "INSERT INTO Player(playerName, password, coin) VALUES(@playerName, @password, @coin)";
+            string query = "SELECT * FROM Player WHERE email = @email";
+            SqlParameter[] sqlParameters = new SqlParameter[1];
+            sqlParameters[0] = new SqlParameter("@email", SqlDbType.VarChar);
+            sqlParameters[0].Value = _email;
+            return dbConnection.ExecuteSelectQuery(query, sqlParameters);
+        }
+
+        public void Insert(string _email, string _password, int _coin)
+        {
+            string query = "INSERT INTO Player(email, password, coin) VALUES(@email, @password, @coin)";
             SqlParameter[] sqlParameters = new SqlParameter[3];
-            sqlParameters[0] = new SqlParameter("@playerName", SqlDbType.VarChar);
-            sqlParameters[0].Value = _playerName;
+            sqlParameters[0] = new SqlParameter("@email", SqlDbType.VarChar);
+            sqlParameters[0].Value = _email;
             sqlParameters[1] = new SqlParameter("@password", SqlDbType.VarChar);
             sqlParameters[1].Value = _password;
             sqlParameters[2] = new SqlParameter("@coin", SqlDbType.VarChar);
@@ -59,20 +70,27 @@ namespace DAO
             dbConnection.ExecuteInsertQuery(query, sqlParameters);
         }
 
-        public void Update(int _idPlayer, string _playerName, string _password, int _coin)
+        public void Update(int _idPlayer, int _coin)
         {
-            string query = "UPDATE Player SET playerName = @playerName, password = @password, coin = @coin " +
-                "WHERE idPlayer = @idPlayer";
-            SqlParameter[] sqlParameters = new SqlParameter[4];
+            string query = "UPDATE Player SET coin = @coin WHERE idPlayer = @idPlayer";
+            SqlParameter[] sqlParameters = new SqlParameter[2];
             
-            sqlParameters[0] = new SqlParameter("@playerName", SqlDbType.VarChar);
-            sqlParameters[0].Value = _playerName;
-            sqlParameters[1] = new SqlParameter("@password", SqlDbType.VarChar);
-            sqlParameters[1].Value = _password;
-            sqlParameters[2] = new SqlParameter("@coin", SqlDbType.VarChar);
-            sqlParameters[2].Value = _coin;
-            sqlParameters[3] = new SqlParameter("@idPlayer", SqlDbType.VarChar);
-            sqlParameters[3].Value = _idPlayer;
+            sqlParameters[0] = new SqlParameter("@coin", SqlDbType.Int);
+            sqlParameters[0].Value = _coin;
+            sqlParameters[1] = new SqlParameter("@idPlayer", SqlDbType.Int);
+            sqlParameters[1].Value = _idPlayer;
+            dbConnection.ExecuteUpdateQuery(query, sqlParameters);
+        }
+
+        public void Update(string _email, string _password)
+        {
+            string query = "UPDATE Player SET password = @password WHERE email = @email";
+            SqlParameter[] sqlParameters = new SqlParameter[2];
+
+            sqlParameters[0] = new SqlParameter("@password", SqlDbType.VarChar);
+            sqlParameters[0].Value = _password;
+            sqlParameters[1] = new SqlParameter("@email", SqlDbType.VarChar);
+            sqlParameters[1].Value = _email;
             dbConnection.ExecuteUpdateQuery(query, sqlParameters);
         }
     }

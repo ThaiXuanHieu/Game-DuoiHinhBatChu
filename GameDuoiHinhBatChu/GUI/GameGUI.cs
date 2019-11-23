@@ -20,6 +20,8 @@ namespace GUI
         string[] images = new string[] { "kichdong", "taihoa", "thamhoa", "tichphan", "tungtang", "xalan", "xauho", "xuongrong", "yeuot", "baola", "nhaccu", "caokien", "baothuc", "kinhdo", "noigian", "bachimbaynoi", "bamoi", "cobap", "xichlo", "dauthu" };
         string[] answers = new string[] { "KICHDONG", "TAIHOA", "THAMHOA", "TICHPHAN", "TUNGTANG", "XALAN", "XAUHO", "XUONGRONG", "YEUOT", "BAOLA", "NHACCU", "CAOKIEN", "BAOTHUC", "KINHDO", "NOIGIAN", "BACHIMBAYNOI", "BAMOI", "COBAP", "XICHLO", "DAUTHU" };
         string[] answersVie = new string[] { "KÍCH ĐỘNG", "TAI HỌA", "THẢM HỌA", "TÍCH PHÂN", "TUNG TĂNG", "XÀ LAN", "XẤU HỔ", "XƯƠNG RỒNG", "YẾU ỚT", "BAO LA", "NHẠC CỤ", "CAO KIẾN", "BÁO THỨC", "KINH ĐỘ", "NỘI GIÁN", "BA CHÌM BẢY NỔI", "BÀ MỐI", "CƠ BẮP", "XÍCH LÔ", "ĐẦU THÚ" };
+        List<Button> buttons;
+
         Bitmap bitmap;
 
         int i = 0;
@@ -28,11 +30,11 @@ namespace GUI
         int index = 0;
         string imageLocation = Application.StartupPath + "\\Resources\\";
 
-        public GameGUI(int _idPlayer)
+        public GameGUI(PlayerDTO _player)
         {
             InitializeComponent();
-            
-            player = PlayerBUS.Instance.GetPlayerByIDPlayer(_idPlayer);
+
+            this.player = _player;
             
         }
 
@@ -77,7 +79,12 @@ namespace GUI
 
         public void LoadNextQuestion()
         {
-            
+            // Xóa các button của câu hỏi cũ
+            foreach (var btn in buttons)
+            {
+                pnlButton.Controls.Remove(btn);
+            }
+
             index++;
             CheckWin();
             lblOrdinal.Text = index.ToString(); // ordinal = 2
@@ -136,6 +143,7 @@ namespace GUI
         // Tạo các Button với các ký tự được phát sinh ngẫu nhiên từ Đáp án và Bảng chữ cái
         private void GenButtonChar(int index)
         {
+            
             List<string> chars = new List<string>(14);
             foreach(var ch in answers[index - 1])
             {
@@ -152,7 +160,7 @@ namespace GUI
                 chars.Add(alphabet[i].ToString());
             }
 
-            List<Button> buttons = new List<Button>() { btnChar1, btnChar2, btnChar3, btnChar4, btnChar5, btnChar6, 
+            buttons = new List<Button>() { btnChar1, btnChar2, btnChar3, btnChar4, btnChar5, btnChar6, 
             btnChar7, btnChar8, btnChar9, btnChar10, btnChar11, btnChar12, btnChar13, btnChar14};
 
             foreach(var button in buttons)
@@ -160,19 +168,19 @@ namespace GUI
                 indexRandom = rd.Next(chars.Count);
                 button.Text = chars[indexRandom];
                 chars.Remove(chars[indexRandom]);
+
+                pnlButton.Controls.Add(button);
             }
 
         }
-
 
         private void btnChar_Click(object sender, EventArgs e)
         {
             Button btn = sender as Button;
             textBoxes[i].Text = btn.Text;
+            pnlButton.Controls.Remove(btn);
             result += btn.Text;
             i++;
-            btn.Text = "";
-            //btn.Enabled = false;
             if (i == answers[index - 1].Length)
             {
                 CheckAnswer();
@@ -183,7 +191,7 @@ namespace GUI
         {
             if(MessageBox.Show("Lưu và Thoát", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
-                PlayerBUS.Instance.UpdatePlayer(player.IDPlayer, player.PlayerName, player.Password, int.Parse(lblCoin.Text));
+                PlayerBUS.Instance.UpdatePlayer(player.IDPlayer, int.Parse(lblCoin.Text));
                 QuestionBUS.Instance.UpdateQuestion(Int32.Parse(lblOrdinal.Text), imageLocation + images[index - 1], answers[index - 1], question.IDPlayer);
 
                 Application.Exit();

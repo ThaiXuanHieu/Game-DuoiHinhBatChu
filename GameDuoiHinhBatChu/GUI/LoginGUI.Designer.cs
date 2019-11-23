@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginGUI));
             this.lblLogin = new System.Windows.Forms.Label();
-            this.txtPlayerName = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
             this.pnlTop = new System.Windows.Forms.Panel();
             this.lblNameGame = new System.Windows.Forms.Label();
             this.txtPassword = new System.Windows.Forms.TextBox();
@@ -43,14 +43,12 @@
             this.btnSignup = new System.Windows.Forms.Button();
             this.txtReEnterPassword = new System.Windows.Forms.TextBox();
             this.txtPasswordNew = new System.Windows.Forms.TextBox();
-            this.txtPlayerNameNew = new System.Windows.Forms.TextBox();
+            this.txtEmailNew = new System.Windows.Forms.TextBox();
             this.lblSignup = new System.Windows.Forms.Label();
             this.pnlRight = new System.Windows.Forms.Panel();
-            this.lblPasswordNewTitle = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.llbBack2 = new System.Windows.Forms.LinkLabel();
-            this.btnTakePassword = new System.Windows.Forms.Button();
-            this.txtPlayerNameForTakePassword = new System.Windows.Forms.TextBox();
+            this.btnGenNewPassword = new System.Windows.Forms.Button();
+            this.txtEmailVerify = new System.Windows.Forms.TextBox();
             this.lblTakePassword = new System.Windows.Forms.Label();
             this.Timer1 = new System.Windows.Forms.Timer(this.components);
             this.Timer2 = new System.Windows.Forms.Timer(this.components);
@@ -69,15 +67,15 @@
             this.lblLogin.TabIndex = 0;
             this.lblLogin.Text = "Đăng nhập";
             // 
-            // txtPlayerName
+            // txtEmail
             // 
-            this.txtPlayerName.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPlayerName.Location = new System.Drawing.Point(65, 163);
-            this.txtPlayerName.Multiline = true;
-            this.txtPlayerName.Name = "txtPlayerName";
-            this.txtPlayerName.Size = new System.Drawing.Size(301, 43);
-            this.txtPlayerName.TabIndex = 1;
-            this.txtPlayerName.Text = "Tài khoản";
+            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.Location = new System.Drawing.Point(65, 163);
+            this.txtEmail.Multiline = true;
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(301, 43);
+            this.txtEmail.TabIndex = 1;
+            this.txtEmail.Text = "Email";
             // 
             // pnlTop
             // 
@@ -161,7 +159,7 @@
             this.pnlLeft.Controls.Add(this.btnSignup);
             this.pnlLeft.Controls.Add(this.txtReEnterPassword);
             this.pnlLeft.Controls.Add(this.txtPasswordNew);
-            this.pnlLeft.Controls.Add(this.txtPlayerNameNew);
+            this.pnlLeft.Controls.Add(this.txtEmailNew);
             this.pnlLeft.Controls.Add(this.lblSignup);
             this.pnlLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlLeft.Location = new System.Drawing.Point(0, 60);
@@ -220,15 +218,15 @@
             this.txtPasswordNew.TabIndex = 1;
             this.txtPasswordNew.Text = "Mật khẩu";
             // 
-            // txtPlayerNameNew
+            // txtEmailNew
             // 
-            this.txtPlayerNameNew.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPlayerNameNew.Location = new System.Drawing.Point(65, 103);
-            this.txtPlayerNameNew.Multiline = true;
-            this.txtPlayerNameNew.Name = "txtPlayerNameNew";
-            this.txtPlayerNameNew.Size = new System.Drawing.Size(301, 43);
-            this.txtPlayerNameNew.TabIndex = 0;
-            this.txtPlayerNameNew.Text = "Tài khoản";
+            this.txtEmailNew.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmailNew.Location = new System.Drawing.Point(65, 103);
+            this.txtEmailNew.Multiline = true;
+            this.txtEmailNew.Name = "txtEmailNew";
+            this.txtEmailNew.Size = new System.Drawing.Size(301, 43);
+            this.txtEmailNew.TabIndex = 0;
+            this.txtEmailNew.Text = "Tài khoản";
             // 
             // lblSignup
             // 
@@ -242,37 +240,15 @@
             // 
             // pnlRight
             // 
-            this.pnlRight.Controls.Add(this.lblPasswordNewTitle);
-            this.pnlRight.Controls.Add(this.label1);
             this.pnlRight.Controls.Add(this.llbBack2);
-            this.pnlRight.Controls.Add(this.btnTakePassword);
-            this.pnlRight.Controls.Add(this.txtPlayerNameForTakePassword);
+            this.pnlRight.Controls.Add(this.btnGenNewPassword);
+            this.pnlRight.Controls.Add(this.txtEmailVerify);
             this.pnlRight.Controls.Add(this.lblTakePassword);
             this.pnlRight.Dock = System.Windows.Forms.DockStyle.Right;
             this.pnlRight.Location = new System.Drawing.Point(422, 60);
             this.pnlRight.Name = "pnlRight";
             this.pnlRight.Size = new System.Drawing.Size(10, 397);
             this.pnlRight.TabIndex = 6;
-            // 
-            // lblPasswordNewTitle
-            // 
-            this.lblPasswordNewTitle.AutoSize = true;
-            this.lblPasswordNewTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPasswordNewTitle.Location = new System.Drawing.Point(134, 268);
-            this.lblPasswordNewTitle.Name = "lblPasswordNewTitle";
-            this.lblPasswordNewTitle.Size = new System.Drawing.Size(184, 32);
-            this.lblPasswordNewTitle.TabIndex = 10;
-            this.lblPasswordNewTitle.Text = "Mật khẩu mới";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(168, 314);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(83, 38);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "------";
             // 
             // llbBack2
             // 
@@ -289,29 +265,29 @@
             this.llbBack2.VisitedLinkColor = System.Drawing.Color.DodgerBlue;
             this.llbBack2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llbBack2_LinkClicked);
             // 
-            // btnTakePassword
+            // btnGenNewPassword
             // 
-            this.btnTakePassword.BackColor = System.Drawing.Color.DodgerBlue;
-            this.btnTakePassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTakePassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTakePassword.ForeColor = System.Drawing.Color.White;
-            this.btnTakePassword.Location = new System.Drawing.Point(149, 199);
-            this.btnTakePassword.Name = "btnTakePassword";
-            this.btnTakePassword.Size = new System.Drawing.Size(154, 45);
-            this.btnTakePassword.TabIndex = 1;
-            this.btnTakePassword.Text = "Lấy";
-            this.btnTakePassword.UseVisualStyleBackColor = false;
-            this.btnTakePassword.Click += new System.EventHandler(this.btnTakePassword_Click);
+            this.btnGenNewPassword.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnGenNewPassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGenNewPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGenNewPassword.ForeColor = System.Drawing.Color.White;
+            this.btnGenNewPassword.Location = new System.Drawing.Point(149, 199);
+            this.btnGenNewPassword.Name = "btnGenNewPassword";
+            this.btnGenNewPassword.Size = new System.Drawing.Size(154, 45);
+            this.btnGenNewPassword.TabIndex = 1;
+            this.btnGenNewPassword.Text = "Lấy";
+            this.btnGenNewPassword.UseVisualStyleBackColor = false;
+            this.btnGenNewPassword.Click += new System.EventHandler(this.btnGenNewPassword_Click);
             // 
-            // txtPlayerNameForTakePassword
+            // txtEmailVerify
             // 
-            this.txtPlayerNameForTakePassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPlayerNameForTakePassword.Location = new System.Drawing.Point(80, 110);
-            this.txtPlayerNameForTakePassword.Multiline = true;
-            this.txtPlayerNameForTakePassword.Name = "txtPlayerNameForTakePassword";
-            this.txtPlayerNameForTakePassword.Size = new System.Drawing.Size(301, 43);
-            this.txtPlayerNameForTakePassword.TabIndex = 0;
-            this.txtPlayerNameForTakePassword.Text = "Tài khoản";
+            this.txtEmailVerify.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmailVerify.Location = new System.Drawing.Point(80, 110);
+            this.txtEmailVerify.Multiline = true;
+            this.txtEmailVerify.Name = "txtEmailVerify";
+            this.txtEmailVerify.Size = new System.Drawing.Size(301, 43);
+            this.txtEmailVerify.TabIndex = 0;
+            this.txtEmailVerify.Text = "Email";
             // 
             // lblTakePassword
             // 
@@ -346,7 +322,7 @@
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.pnlTop);
             this.Controls.Add(this.txtPassword);
-            this.Controls.Add(this.txtPlayerName);
+            this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.lblLogin);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -369,7 +345,7 @@
         #endregion
 
         private System.Windows.Forms.Label lblLogin;
-        private System.Windows.Forms.TextBox txtPlayerName;
+        private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Panel pnlTop;
         private System.Windows.Forms.Label lblNameGame;
         private System.Windows.Forms.TextBox txtPassword;
@@ -381,14 +357,12 @@
         private System.Windows.Forms.Button btnSignup;
         private System.Windows.Forms.TextBox txtReEnterPassword;
         private System.Windows.Forms.TextBox txtPasswordNew;
-        private System.Windows.Forms.TextBox txtPlayerNameNew;
+        private System.Windows.Forms.TextBox txtEmailNew;
         private System.Windows.Forms.Label lblSignup;
         private System.Windows.Forms.Panel pnlRight;
-        private System.Windows.Forms.Label lblPasswordNewTitle;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.LinkLabel llbBack2;
-        private System.Windows.Forms.Button btnTakePassword;
-        private System.Windows.Forms.TextBox txtPlayerNameForTakePassword;
+        private System.Windows.Forms.Button btnGenNewPassword;
+        private System.Windows.Forms.TextBox txtEmailVerify;
         private System.Windows.Forms.Label lblTakePassword;
         private System.Windows.Forms.Timer Timer1;
         private System.Windows.Forms.Timer Timer2;

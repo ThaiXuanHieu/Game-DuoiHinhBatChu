@@ -9,7 +9,7 @@ namespace DTO
     public class PlayerDTO
     {
         private int _idPlayer;
-        private string _playerName;
+        private string _email;
         private string _password;
         private int _coin;
 
@@ -26,8 +26,8 @@ namespace DTO
 
         public string PlayerName
         {
-            get { return _playerName; }
-            set { _playerName = value; }
+            get { return _email; }
+            set { _email = value; }
         }
 
         public string Password
