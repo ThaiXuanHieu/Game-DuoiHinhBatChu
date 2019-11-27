@@ -142,7 +142,7 @@ namespace GUI
                     SmtpClient smt = new SmtpClient();
                     smt.Host = "smtp.gmail.com";
                     System.Net.NetworkCredential ntcd = new NetworkCredential();
-                    ntcd.UserName = "XTeam";
+                    ntcd.UserName = "likeafternoonqp@gmail.com";
                     ntcd.Password = "Matkhauqp1";
                     smt.Credentials = ntcd;
                     smt.EnableSsl = true;
