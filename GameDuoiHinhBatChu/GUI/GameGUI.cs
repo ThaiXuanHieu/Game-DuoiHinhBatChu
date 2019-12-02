@@ -17,9 +17,9 @@ namespace GUI
     {
         PlayerDTO player;
         QuestionDTO question;
-        string[] images = new string[] { "kichdong", "taihoa", "thamhoa", "tichphan", "tungtang", "xalan", "xauho", "xuongrong", "yeuot", "baola", "nhaccu", "caokien", "baothuc", "kinhdo", "noigian", "bachimbaynoi", "bamoi", "cobap", "xichlo", "dauthu" };
-        string[] answers = new string[] { "KICHDONG", "TAIHOA", "THAMHOA", "TICHPHAN", "TUNGTANG", "XALAN", "XAUHO", "XUONGRONG", "YEUOT", "BAOLA", "NHACCU", "CAOKIEN", "BAOTHUC", "KINHDO", "NOIGIAN", "BACHIMBAYNOI", "BAMOI", "COBAP", "XICHLO", "DAUTHU" };
-        string[] answersVie = new string[] { "KÍCH ĐỘNG", "TAI HỌA", "THẢM HỌA", "TÍCH PHÂN", "TUNG TĂNG", "XÀ LAN", "XẤU HỔ", "XƯƠNG RỒNG", "YẾU ỚT", "BAO LA", "NHẠC CỤ", "CAO KIẾN", "BÁO THỨC", "KINH ĐỘ", "NỘI GIÁN", "BA CHÌM BẢY NỔI", "BÀ MỐI", "CƠ BẮP", "XÍCH LÔ", "ĐẦU THÚ" };
+        string[] images = new string[] { "mahoa", "xauho", "yeuot", "xalan", "cobap", "bienhieu", "tichphan", "nhanhieu", "xemtuong", "tungtang", "thichthu", "thankhoc", "motmatmuoingo", "duongxichdao", "danhgiaplaca", "bachimbaynoi", "toganlonmat", "nghesinhandan", "nutthatcochai", "guongchieuhau" };
+        string[] answers = new string[] { "MAHOA", "XAUHO", "YEUOT", "XALAN", "COBAP", "BIENHIEU", "TICHPHAN", "NHANHIEU", "XEMTUONG", "TUNGTANG", "THICHTHU", "THANKHOC", "MOTMATMUOINGO", "DUONGXICHDAO", "DANHGIAPLACA", "BACHIMBAYNOI", "TOGANLONMAT", "NGHESINHANDAN", "NUTTHATCOCHAI", "GUONGCHIEUHAU" };
+        string[] answersVie = new string[] { "MÃ HÓA", "XẤU HỔ", "YẾU ỚT", "XÀ LAN", "CƠ BẮP", "BIỂN HIỆU", "TÍCH PHÂN", "NHÃN HIỆU", "XEM TƯỚNG", "TUNG TĂNG", "THÍCH THÚ", "THAN KHÓC", "MỘT MẤT MƯỜI NGỜ", "ĐƯỜNG XÍCH ĐẠO", "ĐÁNH GIÁP LÁ CÀ", "BA CHÌM BẢY NỔI", "TO GAN LỚN MẬT", "NGHỆ SĨ NHÂN DÂN", "NÚT THẮT CỔ CHAI", "GƯƠNG CHIẾU HẬU" };
         List<Button> buttons;
 
         Bitmap bitmap;
@@ -49,9 +49,7 @@ namespace GUI
             GenTextBox();
             GenButtonChar(index);
         }
-
-        
-        
+  
         public void CheckAnswer()
         {
             if (result.Equals(answers[index - 1]))

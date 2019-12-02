@@ -94,7 +94,6 @@
             // 
             this.lblOrdinalOfQuestion.AutoSize = true;
             this.lblOrdinalOfQuestion.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblOrdinalOfQuestion.ForeColor = System.Drawing.Color.DodgerBlue;
             this.lblOrdinalOfQuestion.Location = new System.Drawing.Point(12, 77);
             this.lblOrdinalOfQuestion.Name = "lblOrdinalOfQuestion";
             this.lblOrdinalOfQuestion.Size = new System.Drawing.Size(89, 39);
@@ -105,7 +104,6 @@
             // 
             this.lblOrdinal.AutoSize = true;
             this.lblOrdinal.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblOrdinal.ForeColor = System.Drawing.Color.DodgerBlue;
             this.lblOrdinal.Location = new System.Drawing.Point(118, 77);
             this.lblOrdinal.Name = "lblOrdinal";
             this.lblOrdinal.Size = new System.Drawing.Size(0, 39);
@@ -349,7 +347,6 @@
             // 
             this.lblLevel.AutoSize = true;
             this.lblLevel.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLevel.ForeColor = System.Drawing.Color.DodgerBlue;
             this.lblLevel.Location = new System.Drawing.Point(12, 20);
             this.lblLevel.Name = "lblLevel";
             this.lblLevel.Size = new System.Drawing.Size(146, 39);
@@ -360,7 +357,6 @@
             // 
             this.lblLevelDetail.AutoSize = true;
             this.lblLevelDetail.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLevelDetail.ForeColor = System.Drawing.Color.DodgerBlue;
             this.lblLevelDetail.Location = new System.Drawing.Point(164, 20);
             this.lblLevelDetail.Name = "lblLevelDetail";
             this.lblLevelDetail.Size = new System.Drawing.Size(55, 39);
