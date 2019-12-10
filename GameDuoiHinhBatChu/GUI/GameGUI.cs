@@ -43,6 +43,7 @@ namespace GUI
             
             question = QuestionBUS.Instance.GetQuestionByIDPlayer(player.IDPlayer);
             index = question.IDQuestion;// = 1
+            CheckLevel();
             lblCoin.Text = player.Coin.ToString();// = 100;
             lblOrdinal.Text = question.IDQuestion.ToString();// = 1;
             picQuestion.Image = new Bitmap(question.ImageQuestion + ".jpg");
@@ -55,7 +56,13 @@ namespace GUI
             if (result.Equals(answers[index - 1]))
             {
                 string text = "ĐÁP ÁN : " + answersVie[index - 1];
-                MessageBox.Show("CHÚC MỪNG! THƯỞNG 100 COIN\n\n" + text, "Thông báo");
+                MessageBox.Show("CHÍNH XÁC\n\n" + text, "Thông báo");
+                if (index >= 1 && index <= 5)
+                    lblCoin.Text = (int.Parse(lblCoin.Text) + 100).ToString();
+                if (index >= 6 && index <= 12)
+                    lblCoin.Text = (int.Parse(lblCoin.Text) + 200).ToString();
+                if (index >= 13 && index <= 20)
+                    lblCoin.Text = (int.Parse(lblCoin.Text) + 300).ToString();
                 RemoveTextBox();
                 LoadNextQuestion();
             }
@@ -86,14 +93,24 @@ namespace GUI
             index++;
             CheckWin();
             lblOrdinal.Text = index.ToString(); // ordinal = 2
-            lblCoin.Text = (int.Parse(lblCoin.Text) + 100).ToString(); // coin = 200
+            lblCoin.Text = int.Parse(lblCoin.Text).ToString(); // coin = 200
             bitmap = new Bitmap(Application.StartupPath + "\\Resources\\" + images[index - 1].ToString() + ".jpg"); 
             picQuestion.Image = bitmap;
             GenTextBox();
             GenButtonChar(index);
             i = 0;
             result = string.Empty;
+            CheckLevel();
+        }
 
+        public void CheckLevel()
+        {
+            if (index >= 1 && index <= 5)
+                lblLevelDetail.Text = "Dễ";
+            if (index >= 6 && index <= 12)
+                lblLevelDetail.Text = "Thường";
+            if (index >= 13 && index <= 20)
+                lblLevelDetail.Text = "Khó";
         }
 
         public void CheckWin()

@@ -159,7 +159,7 @@
             this.btnChar1.BackColor = System.Drawing.Color.White;
             this.btnChar1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnChar1.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnChar1.Location = new System.Drawing.Point(32, 14);
+            this.btnChar1.Location = new System.Drawing.Point(24, 13);
             this.btnChar1.Name = "btnChar1";
             this.btnChar1.Size = new System.Drawing.Size(39, 46);
             this.btnChar1.TabIndex = 38;
@@ -171,7 +171,7 @@
             this.btnChar2.BackColor = System.Drawing.Color.White;
             this.btnChar2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnChar2.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnChar2.Location = new System.Drawing.Point(77, 14);
+            this.btnChar2.Location = new System.Drawing.Point(69, 13);
             this.btnChar2.Name = "btnChar2";
             this.btnChar2.Size = new System.Drawing.Size(39, 46);
             this.btnChar2.TabIndex = 37;
@@ -183,7 +183,7 @@
             this.btnChar3.BackColor = System.Drawing.Color.White;
             this.btnChar3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnChar3.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnChar3.Location = new System.Drawing.Point(122, 14);
+            this.btnChar3.Location = new System.Drawing.Point(114, 13);
             this.btnChar3.Name = "btnChar3";
             this.btnChar3.Size = new System.Drawing.Size(39, 46);
             this.btnChar3.TabIndex = 36;
@@ -195,7 +195,7 @@
             this.btnChar4.BackColor = System.Drawing.Color.White;
             this.btnChar4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnChar4.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnChar4.Location = new System.Drawing.Point(167, 14);
+            this.btnChar4.Location = new System.Drawing.Point(159, 13);
             this.btnChar4.Name = "btnChar4";
             this.btnChar4.Size = new System.Drawing.Size(39, 46);
             this.btnChar4.TabIndex = 35;
@@ -207,7 +207,7 @@
             this.btnChar5.BackColor = System.Drawing.Color.White;
             this.btnChar5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnChar5.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnChar5.Location = new System.Drawing.Point(212, 14);
+            this.btnChar5.Location = new System.Drawing.Point(204, 13);
             this.btnChar5.Name = "btnChar5";
             this.btnChar5.Size = new System.Drawing.Size(39, 46);
             this.btnChar5.TabIndex = 34;
@@ -219,7 +219,7 @@
             this.btnChar6.BackColor = System.Drawing.Color.White;
             this.btnChar6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnChar6.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnChar6.Location = new System.Drawing.Point(257, 14);
+            this.btnChar6.Location = new System.Drawing.Point(249, 13);
             this.btnChar6.Name = "btnChar6";
             this.btnChar6.Size = new System.Drawing.Size(39, 46);
             this.btnChar6.TabIndex = 33;
@@ -231,7 +231,7 @@
             this.btnChar7.BackColor = System.Drawing.Color.White;
             this.btnChar7.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnChar7.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnChar7.Location = new System.Drawing.Point(302, 14);
+            this.btnChar7.Location = new System.Drawing.Point(294, 13);
             this.btnChar7.Name = "btnChar7";
             this.btnChar7.Size = new System.Drawing.Size(39, 46);
             this.btnChar7.TabIndex = 32;
@@ -243,7 +243,7 @@
             this.btnChar8.BackColor = System.Drawing.Color.White;
             this.btnChar8.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnChar8.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnChar8.Location = new System.Drawing.Point(32, 66);
+            this.btnChar8.Location = new System.Drawing.Point(24, 65);
             this.btnChar8.Name = "btnChar8";
             this.btnChar8.Size = new System.Drawing.Size(39, 46);
             this.btnChar8.TabIndex = 31;
@@ -255,7 +255,7 @@
             this.btnChar9.BackColor = System.Drawing.Color.White;
             this.btnChar9.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnChar9.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnChar9.Location = new System.Drawing.Point(77, 66);
+            this.btnChar9.Location = new System.Drawing.Point(69, 65);
             this.btnChar9.Name = "btnChar9";
             this.btnChar9.Size = new System.Drawing.Size(39, 46);
             this.btnChar9.TabIndex = 30;
@@ -267,7 +267,7 @@
             this.btnChar10.BackColor = System.Drawing.Color.White;
             this.btnChar10.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnChar10.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnChar10.Location = new System.Drawing.Point(122, 66);
+            this.btnChar10.Location = new System.Drawing.Point(114, 65);
             this.btnChar10.Name = "btnChar10";
             this.btnChar10.Size = new System.Drawing.Size(39, 46);
             this.btnChar10.TabIndex = 29;
@@ -279,7 +279,7 @@
             this.btnChar11.BackColor = System.Drawing.Color.White;
             this.btnChar11.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnChar11.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnChar11.Location = new System.Drawing.Point(167, 66);
+            this.btnChar11.Location = new System.Drawing.Point(159, 65);
             this.btnChar11.Name = "btnChar11";
             this.btnChar11.Size = new System.Drawing.Size(39, 46);
             this.btnChar11.TabIndex = 28;
@@ -291,7 +291,7 @@
             this.btnChar12.BackColor = System.Drawing.Color.White;
             this.btnChar12.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnChar12.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnChar12.Location = new System.Drawing.Point(212, 66);
+            this.btnChar12.Location = new System.Drawing.Point(204, 65);
             this.btnChar12.Name = "btnChar12";
             this.btnChar12.Size = new System.Drawing.Size(39, 46);
             this.btnChar12.TabIndex = 27;
@@ -303,7 +303,7 @@
             this.btnChar13.BackColor = System.Drawing.Color.White;
             this.btnChar13.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnChar13.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnChar13.Location = new System.Drawing.Point(257, 66);
+            this.btnChar13.Location = new System.Drawing.Point(249, 65);
             this.btnChar13.Name = "btnChar13";
             this.btnChar13.Size = new System.Drawing.Size(39, 46);
             this.btnChar13.TabIndex = 26;
@@ -315,7 +315,7 @@
             this.btnChar14.BackColor = System.Drawing.Color.White;
             this.btnChar14.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnChar14.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnChar14.Location = new System.Drawing.Point(302, 66);
+            this.btnChar14.Location = new System.Drawing.Point(294, 65);
             this.btnChar14.Name = "btnChar14";
             this.btnChar14.Size = new System.Drawing.Size(39, 46);
             this.btnChar14.TabIndex = 25;
@@ -338,7 +338,7 @@
             this.pnlButton.Controls.Add(this.btnChar7);
             this.pnlButton.Controls.Add(this.btnChar5);
             this.pnlButton.Controls.Add(this.btnChar6);
-            this.pnlButton.Location = new System.Drawing.Point(125, 538);
+            this.pnlButton.Location = new System.Drawing.Point(116, 538);
             this.pnlButton.Name = "pnlButton";
             this.pnlButton.Size = new System.Drawing.Size(361, 123);
             this.pnlButton.TabIndex = 39;
