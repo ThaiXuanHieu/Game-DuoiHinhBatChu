@@ -24,7 +24,7 @@ namespace DTO
             set { _idPlayer = value; }
         }
 
-        public string PlayerName
+        public string Email
         {
             get { return _email; }
             set { _email = value; }

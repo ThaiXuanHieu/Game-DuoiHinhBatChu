@@ -42,7 +42,7 @@ namespace BUS
             foreach (DataRow dataRow in dataTable.Rows)
             {
                 player.IDPlayer = Int32.Parse(dataRow["idPlayer"].ToString().Trim());
-                player.PlayerName = dataRow["email"].ToString().Trim();
+                player.Email = dataRow["email"].ToString().Trim();
                 player.Password = dataRow["password"].ToString().Trim();
                 player.Coin = Int32.Parse(dataRow["coin"].ToString());
             }

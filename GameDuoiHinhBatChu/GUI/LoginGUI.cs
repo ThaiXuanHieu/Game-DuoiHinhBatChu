@@ -20,8 +20,8 @@ namespace GUI
         private bool hidden1;
         private bool hidden2;
 
-        string[] images = new string[] { "kichdong" };
-        string[] answers = new string[] { "KICHDONG" };
+        string[] images = new string[] { "mahoa" };
+        string[] answers = new string[] { "MAHOA" };
 
         PlayerDTO player = new PlayerDTO();
 
@@ -57,8 +57,8 @@ namespace GUI
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            
-            if(!EmailValidation.IsValid(txtEmail.Text.Trim()))
+
+            if (!EmailValidation.IsValid(txtEmail.Text.Trim()))
             {
                 MessageBox.Show("Email không hợp lệ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
@@ -68,8 +68,9 @@ namespace GUI
             {
                 int idPlayer = dtPlayer.Rows[0].Field<int>("idPlayer");
                 player = PlayerBUS.Instance.GetPlayerByIDPlayer(idPlayer);
+                this.Hide();
                 GameGUI gameGUI = new GameGUI(player);
-                gameGUI.Show();
+                gameGUI.ShowDialog();
 
             }
             else
@@ -90,14 +91,21 @@ namespace GUI
 
         private void btnSignup_Click(object sender, EventArgs e)
         {
+            if (!EmailValidation.IsValid(txtEmailNew.Text))
+            {
+                MessageBox.Show("Email không hợp lệ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
             if (txtPasswordNew.Text.Equals(txtReEnterPassword.Text))
             {
                 // Insert Player
                 PlayerBUS.Instance.InsertPlayerToDB(txtEmailNew.Text, txtPasswordNew.Text, 100);
                 MessageBox.Show("Đăng ký thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 // Insert Question
+                DataTable dtPlayer = PlayerBUS.Instance.GetPlayer(txtEmailNew.Text, txtPasswordNew.Text);
+                int idPlayer = dtPlayer.Rows[0].Field<int>("idPlayer");
                 string imageLocation = Application.StartupPath + "\\Resources\\" + images[0] + ".jpg";
-                QuestionBUS.Instance.InsertQuestionToDB(1, imageLocation, answers[0], player.IDPlayer);
+                QuestionBUS.Instance.InsertQuestionToDB(1, imageLocation, answers[0], idPlayer);
             }
             else
             {
@@ -114,7 +122,7 @@ namespace GUI
             }
 
             DataTable dtPlayer = PlayerBUS.Instance.GetPlayerByEmail(txtEmailVerify.Text);
-            if(dtPlayer.Rows.Count != 0)
+            if (dtPlayer.Rows.Count != 0)
             {
                 // Phát sinh ngẫu nhiên mật khẩu mới
                 var chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
@@ -220,6 +228,26 @@ namespace GUI
             }
         }
 
-        
+        private void LoginGUI_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult dr;
+            dr = MessageBox.Show("BẠN CHẮC CHẮN ĐÓNG ỨNG DỤNG KHÔNG?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dr == System.Windows.Forms.DialogResult.No)
+            {
+                e.Cancel = true;
+                return;
+            }
+            Application.ExitThread();
+        }
+
+        private void txtEmailNew_Leave(object sender, EventArgs e)
+        {
+            DataTable dtPlayer = PlayerBUS.Instance.GetPlayerByEmail(txtEmailNew.Text);
+            if (dtPlayer.Rows.Count != 0)
+            {
+                MessageBox.Show("Email này đã tồn tại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtEmailNew.Focus();
+            }
+        }
     }
 }

@@ -32,7 +32,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GameGUI));
             this.DragControl = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.lblCoin = new System.Windows.Forms.Label();
-            this.btnClose = new System.Windows.Forms.Button();
             this.lblOrdinalOfQuestion = new System.Windows.Forms.Label();
             this.lblOrdinal = new System.Windows.Forms.Label();
             this.picCoin = new System.Windows.Forms.PictureBox();
@@ -78,18 +77,6 @@
             this.lblCoin.Size = new System.Drawing.Size(0, 39);
             this.lblCoin.TabIndex = 2;
             // 
-            // btnClose
-            // 
-            this.btnClose.FlatAppearance.BorderSize = 0;
-            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Location = new System.Drawing.Point(550, 0);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(50, 30);
-            this.btnClose.TabIndex = 3;
-            this.btnClose.Text = "X";
-            this.btnClose.UseVisualStyleBackColor = true;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
             // lblOrdinalOfQuestion
             // 
             this.lblOrdinalOfQuestion.AutoSize = true;
@@ -104,7 +91,7 @@
             // 
             this.lblOrdinal.AutoSize = true;
             this.lblOrdinal.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblOrdinal.Location = new System.Drawing.Point(118, 77);
+            this.lblOrdinal.Location = new System.Drawing.Point(107, 77);
             this.lblOrdinal.Name = "lblOrdinal";
             this.lblOrdinal.Size = new System.Drawing.Size(0, 39);
             this.lblOrdinal.TabIndex = 5;
@@ -375,15 +362,17 @@
             this.Controls.Add(this.lblLevelDetail);
             this.Controls.Add(this.lblLevel);
             this.Controls.Add(this.lblOrdinalOfQuestion);
-            this.Controls.Add(this.btnClose);
             this.Controls.Add(this.lblCoin);
             this.Controls.Add(this.picCoin);
             this.Controls.Add(this.picQuestion);
             this.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "GameGUI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Game Đuổi hình bắt chữ";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.GameGUI_FormClosing);
             this.Load += new System.EventHandler(this.GameGUI_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picCoin)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picQuestion)).EndInit();
@@ -399,7 +388,6 @@
         private System.Windows.Forms.PictureBox picQuestion;
         private System.Windows.Forms.Label lblCoin;
         private System.Windows.Forms.PictureBox picCoin;
-        private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Label lblOrdinal;
         private System.Windows.Forms.Label lblOrdinalOfQuestion;
         private System.Windows.Forms.CheckBox btnOnOffSound;

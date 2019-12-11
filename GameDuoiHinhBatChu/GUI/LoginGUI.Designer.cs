@@ -226,7 +226,8 @@
             this.txtEmailNew.Name = "txtEmailNew";
             this.txtEmailNew.Size = new System.Drawing.Size(301, 43);
             this.txtEmailNew.TabIndex = 0;
-            this.txtEmailNew.Text = "Tài khoản";
+            this.txtEmailNew.Text = "Email";
+            this.txtEmailNew.Leave += new System.EventHandler(this.txtEmailNew_Leave);
             // 
             // lblSignup
             // 
@@ -330,6 +331,7 @@
             this.Name = "LoginGUI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Game Đuổi Hình Bắt Chữ";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.LoginGUI_FormClosing);
             this.Load += new System.EventHandler(this.LoginGUI_Load);
             this.pnlTop.ResumeLayout(false);
             this.pnlTop.PerformLayout();
