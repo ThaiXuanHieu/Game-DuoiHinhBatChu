@@ -91,6 +91,11 @@ namespace GUI
 
         private void btnSignup_Click(object sender, EventArgs e)
         {
+            if (!EmailValidation.IsValid(txtEmail.Text.Trim()))
+            {
+                MessageBox.Show("Email không hợp lệ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
             if (!EmailValidation.IsValid(txtEmailNew.Text))
             {
                 MessageBox.Show("Email không hợp lệ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
