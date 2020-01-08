@@ -16,3 +16,12 @@ F:\Game\Game-DuoiHinhBatChu\GameDuoiHinhBatChu\DAO\obj\Debug\DAO.csproj.CoreComp
 F:\Game\Game-DuoiHinhBatChu\GameDuoiHinhBatChu\DAO\obj\Debug\DAO.csproj.CopyComplete
 F:\Game\Game-DuoiHinhBatChu\GameDuoiHinhBatChu\DAO\obj\Debug\DAO.dll
 F:\Game\Game-DuoiHinhBatChu\GameDuoiHinhBatChu\DAO\obj\Debug\DAO.pdb
+F:\Game\Đề tài TTCS\GameDuoiHinhBatChu\DAO\bin\Debug\DAO.dll
+F:\Game\Đề tài TTCS\GameDuoiHinhBatChu\DAO\bin\Debug\DAO.pdb
+F:\Game\Đề tài TTCS\GameDuoiHinhBatChu\DAO\bin\Debug\DTO.dll
+F:\Game\Đề tài TTCS\GameDuoiHinhBatChu\DAO\bin\Debug\DTO.pdb
+F:\Game\Đề tài TTCS\GameDuoiHinhBatChu\DAO\obj\Debug\DAO.csprojAssemblyReference.cache
+F:\Game\Đề tài TTCS\GameDuoiHinhBatChu\DAO\obj\Debug\DAO.csproj.CoreCompileInputs.cache
+F:\Game\Đề tài TTCS\GameDuoiHinhBatChu\DAO\obj\Debug\DAO.csproj.CopyComplete
+F:\Game\Đề tài TTCS\GameDuoiHinhBatChu\DAO\obj\Debug\DAO.dll
+F:\Game\Đề tài TTCS\GameDuoiHinhBatChu\DAO\obj\Debug\DAO.pdb

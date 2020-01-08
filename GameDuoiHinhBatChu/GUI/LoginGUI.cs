@@ -91,9 +91,9 @@ namespace GUI
 
         private void btnSignup_Click(object sender, EventArgs e)
         {
-            if (!EmailValidation.IsValid(txtEmail.Text.Trim()))
+            if(string.IsNullOrEmpty(txtEmailNew.Text) || string.IsNullOrEmpty(txtPasswordNew.Text))
             {
-                MessageBox.Show("Email không hợp lệ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Bạn phải nhập đầy đủ thông tin", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
             if (!EmailValidation.IsValid(txtEmailNew.Text))
@@ -148,7 +148,7 @@ namespace GUI
 
                     MailMessage msg = new MailMessage();
                     msg.From = new MailAddress("likeafternoonqp@gmail.com");
-                    msg.To.Add(txtEmail.Text);
+                    msg.To.Add(txtEmailVerify.Text);
                     msg.Subject = "Thông báo Bảo mật quan trọng";
                     msg.Body = "Mật khẩu mới của bạn : " + newPassword;
 
@@ -162,16 +162,18 @@ namespace GUI
                     smt.Port = 587;
                     smt.Send(msg);
 
-                    MessageBox.Show("Mật khẩu mới của bạn được gửi về Email của bạn");
-
+                    MessageBox.Show("Mật khẩu mới của bạn được gửi về Email của bạn", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    PlayerBUS.Instance.UpdatePassword(txtEmailVerify.Text, newPassword);
                 }
                 catch (Exception ex)
                 {
 
                     MessageBox.Show(ex.Message);
                 }
-
-                PlayerBUS.Instance.UpdatePassword(txtEmailVerify.Text, newPassword);
+            }
+            else
+            {
+                MessageBox.Show("Email không tồn tại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 

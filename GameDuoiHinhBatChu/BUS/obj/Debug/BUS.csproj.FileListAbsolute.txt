@@ -20,3 +20,14 @@ F:\Game\Game-DuoiHinhBatChu\GameDuoiHinhBatChu\BUS\obj\Debug\BUS.csproj.CoreComp
 F:\Game\Game-DuoiHinhBatChu\GameDuoiHinhBatChu\BUS\obj\Debug\BUS.csproj.CopyComplete
 F:\Game\Game-DuoiHinhBatChu\GameDuoiHinhBatChu\BUS\obj\Debug\BUS.dll
 F:\Game\Game-DuoiHinhBatChu\GameDuoiHinhBatChu\BUS\obj\Debug\BUS.pdb
+F:\Game\Đề tài TTCS\GameDuoiHinhBatChu\BUS\bin\Debug\BUS.dll
+F:\Game\Đề tài TTCS\GameDuoiHinhBatChu\BUS\bin\Debug\BUS.pdb
+F:\Game\Đề tài TTCS\GameDuoiHinhBatChu\BUS\bin\Debug\DAO.dll
+F:\Game\Đề tài TTCS\GameDuoiHinhBatChu\BUS\bin\Debug\DTO.dll
+F:\Game\Đề tài TTCS\GameDuoiHinhBatChu\BUS\bin\Debug\DAO.pdb
+F:\Game\Đề tài TTCS\GameDuoiHinhBatChu\BUS\bin\Debug\DTO.pdb
+F:\Game\Đề tài TTCS\GameDuoiHinhBatChu\BUS\obj\Debug\BUS.csprojAssemblyReference.cache
+F:\Game\Đề tài TTCS\GameDuoiHinhBatChu\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
+F:\Game\Đề tài TTCS\GameDuoiHinhBatChu\BUS\obj\Debug\BUS.csproj.CopyComplete
+F:\Game\Đề tài TTCS\GameDuoiHinhBatChu\BUS\obj\Debug\BUS.dll
+F:\Game\Đề tài TTCS\GameDuoiHinhBatChu\BUS\obj\Debug\BUS.pdb
